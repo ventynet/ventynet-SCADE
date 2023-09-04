@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$********** SCADE Suite KCG 32-bit 6.6 (build i19) ***********
+** Command: kcg66.exe -config C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/config.txt
+** Generation date: 2020-08-23T17:19:10
+*************************************************************$-->
+<mapping>
+  <config>
+    <option name="use_types" value="#off#"/>
+    <option name="imported_root_package" value="#off#"/>
+    <option name="root_package" value="#off#"/>
+    <option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <option name="state_vector" value="#off#"/>
+    <option name="static" value="#off#"/>
+    <option name="separate_io_all" value="#off#"/>
+    <option name="no_separate_io" value="#off#"/>
+    <option name="separate_io" value="#off#"/>
+    <option name="warn_error" value="#off#"/>
+    <option name="short_circuit" value="#off#"/>
+    <option name="wrap_c_ops" value="#off#"/>
+    <option name="input_file"
+        value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/scade_model_without_unused.scade"/>
+    <option name="probes" value="#on#"/>
+    <option name="no_observe" value="#off#"/>
+    <option name="observe" value="#off#"/>
+    <option name="debug" value="#on#"/>
+    <option name="user_config" value="./user_macros.h"/>
+    <option name="input_threshold" value="#off#"/>
+    <option name="header" value="#off#"/>
+    <option name="significance_length" value="31"/>
+    <option name="name_length" value="200"/>
+    <option name="globals_prefix" value="#off#"/>
+    <option name="keep_asserts" value="#off#"/>
+    <option name="global_root_context" value="#off#"/>
+    <option name="expall" value="#off#"/>
+    <option name="noexp" value="#off#"/>
+    <option name="exp" value="#off#"/>
+    <option name="target_dir" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation"/>
+    <option name="target" value="C"/>
+    <option name="root" value="general"/>
+    <option name="auth" value="#off#"/>
+  </config>
+  <model>
+    <array id="1" baseType="14" size="8"/>
+    <array id="2" baseType="3" size="8"/>
+    <array id="3" baseType="14" size="2"/>
+    <predefType id="4" name="bool"/>
+    <predefType id="5" name="char"/>
+    <predefType id="6" name="int8"/>
+    <predefType id="7" name="int16"/>
+    <predefType id="8" name="int32"/>
+    <predefType id="9" name="int64"/>
+    <predefType id="10" name="uint8"/>
+    <predefType id="11" name="uint16"/>
+    <predefType id="12" name="uint32"/>
+    <predefType id="13" name="uint64"/>
+    <predefType id="14" name="float32"/>
+    <predefType id="15" name="float64"/>
+    <predefType id="16" name="size"/>
+    <constant id="17" name="tabla" imported="false" type="2"/>
+    <constant id="18" name="tablaInversa" imported="false" type="2"/>
+    <constant id="19" name="tiempoPausaInspiracion" imported="false" type="8"/>
+    <constant id="20" name="tiempoPausaExpiracion" imported="false" type="8"/>
+    <sensor id="21" name="nPulmon" type="8"/>
+    <sensor id="22" name="qPulmon" type="14"/>
+    <operator id="23" name="general" imported="false" root="true" expanded="false">
+      <input id="24" name="q" clock="false" type="14"/>
+      <input id="25" name="fio2" clock="false" type="14"/>
+      <input id="26" name="ti" clock="false" type="8"/>
+      <input id="27" name="te" clock="false" type="8"/>
+      <output id="28" name="abrirO2" clock="false" type="4"/>
+      <output id="29" name="dutyO2" clock="false" type="14"/>
+      <output id="30" name="abrirAire" clock="false" type="4"/>
+      <output id="31" name="dutyAire" clock="false" type="14"/>
+      <output id="32" name="abrirExpiracion" clock="false" type="4"/>
+      <signal id="33" name="reiniciarReloj"/>
+      <local id="34" name="reloj" clock="false" type="8"/>
+      <local id="35" name="_L2" clock="false" type="8"/>
+      <local id="36" name="_L3" clock="false" type="4"/>
+      <local id="37" name="_L17" clock="false" type="4"/>
+      <local id="38" name="_L18" clock="false" type="4"/>
+      <local id="39" name="_L20" clock="false" type="4"/>
+      <automaton id="40" name="ventilador">
+        <state id="41" name="inspiracion" initial="true" final="false" default="false">
+          <local id="42" name="qTotal" clock="false" type="14"/>
+          <local id="43" name="_L29" clock="false" type="4"/>
+          <automaton id="44" name="regularEIngresar">
+            <state id="45" name="regular" initial="true" final="false" default="false">
+              <local id="46" name="_L20" clock="false" type="4"/>
+              <local id="47" name="_L21" clock="false" type="4"/>
+              <local id="48" name="_L22" clock="false" type="14"/>
+              <local id="49" name="_L23" clock="false" type="14"/>
+              <local id="50" name="_L19" clock="false" type="14"/>
+              <local id="51" name="_L18" clock="false" type="14"/>
+              <local id="52" name="_L17" clock="false" type="14"/>
+              <local id="53" name="_L16" clock="false" type="8"/>
+              <local id="54" name="_L12" clock="false" type="14"/>
+              <local id="55" name="_L13" clock="false" type="14"/>
+              <local id="56" name="_L14" clock="false" type="8"/>
+              <local id="57" name="_L15" clock="false" type="8"/>
+              <local id="58" name="_L11" clock="false" type="8"/>
+              <local id="59" name="_L10" clock="false" type="8"/>
+              <local id="60" name="_L25" clock="false" type="14"/>
+              <local id="61" name="_L24" clock="false" type="14"/>
+              <local id="62" name="_L33" clock="false" type="14"/>
+              <local id="63" name="_L37" clock="false" type="14"/>
+              <instance id="64" name="4" op="91" expanded="false"/>
+              <instance id="65" name="5" op="113" expanded="false"/>
+              <instance id="66" name="1" op="134" expanded="false"/>
+              <last id="67"/>
+              <fork id="68" name="1" kind="weak">
+                <transition id="69" dest="70"/>
+              </fork>
+            </state>
+            <state id="70" name="ingresar" initial="false" final="false" default="false">
+              <local id="71" name="_L2" clock="false" type="14"/>
+              <fork id="72" name="1" kind="weak">
+                <transition id="73" dest="45"/>
+              </fork>
+            </state>
+          </automaton>
+          <fork id="74" name="1" kind="weak">
+            <transition id="75" dest="82"/>
+          </fork>
+        </state>
+        <state id="76" name="espiracion" initial="false" final="false" default="false">
+          <local id="77" name="_L2" clock="false" type="4"/>
+          <local id="78" name="_L3" clock="false" type="4"/>
+          <local id="79" name="_L4" clock="false" type="14"/>
+          <fork id="80" name="1" kind="weak">
+            <transition id="81" dest="85"/>
+          </fork>
+        </state>
+        <state id="82" name="pausaInspiracion" initial="false" final="false" default="false">
+          <fork id="83" name="1" kind="weak">
+            <transition id="84" dest="76"/>
+          </fork>
+        </state>
+        <state id="85" name="pausaEspiracion" initial="false" final="false" default="false">
+          <fork id="86" name="1" kind="weak">
+            <transition id="87" dest="41"/>
+          </fork>
+        </state>
+      </automaton>
+      <instance id="88" name="2" op="190" expanded="false"/>
+      <arrow id="89" name="6"/>
+      <pre id="90" name="6"/>
+    </operator>
+    <operator id="91" name="paramIniciales" imported="false" root="false" expanded="false">
+      <input id="92" name="q" clock="false" type="14"/>
+      <input id="93" name="FIO2" clock="false" type="14"/>
+      <input id="94" name="tiempos_i" clock="false" type="8"/>
+      <input id="95" name="tiempos_e" clock="false" type="8"/>
+      <output id="96" name="dutyTotal" clock="false" type="14"/>
+      <output id="97" name="fio2" clock="false" type="14"/>
+      <output id="98" name="ti" clock="false" type="8"/>
+      <output id="99" name="te" clock="false" type="8"/>
+      <local id="100" name="_L1" clock="false" type="14"/>
+      <local id="101" name="_L2" clock="false" type="14"/>
+      <local id="102" name="_L4" clock="false" type="14"/>
+      <local id="103" name="_L5" clock="false" type="14"/>
+      <local id="104" name="_L6" clock="false" type="14"/>
+      <local id="105" name="_L8" clock="false" type="14"/>
+      <local id="106" name="_L10" clock="false" type="8"/>
+      <local id="107" name="_L11" clock="false" type="8"/>
+      <local id="108" name="_L13" clock="false" type="2"/>
+      <local id="109" name="_L16" clock="false" type="2"/>
+      <instance id="110" name="1" op="156" expanded="false"/>
+      <instance id="111" name="1" op="167" expanded="false"/>
+      <instance id="112" name="2" op="167" expanded="false"/>
+    </operator>
+    <operator id="113" name="controlInspiracion" imported="false" root="false" expanded="false">
+      <input id="114" name="qPulmon" clock="false" type="14"/>
+      <input id="115" name="nPulmon" clock="false" type="8"/>
+      <input id="116" name="dutyParam" clock="false" type="14"/>
+      <input id="117" name="fio2Param" clock="false" type="14"/>
+      <output id="118" name="abrirO2" clock="false" type="4"/>
+      <output id="119" name="dutyO2" clock="false" type="14"/>
+      <output id="120" name="abrirAire" clock="false" type="4"/>
+      <output id="121" name="dutyAire" clock="false" type="14"/>
+      <local id="122" name="_L1" clock="false" type="14"/>
+      <local id="123" name="_L2" clock="false" type="8"/>
+      <local id="124" name="_L3" clock="false" type="14"/>
+      <local id="125" name="_L4" clock="false" type="14"/>
+      <local id="126" name="_L5" clock="false" type="14"/>
+      <local id="127" name="_L6" clock="false" type="14"/>
+      <local id="128" name="_L7" clock="false" type="14"/>
+      <local id="129" name="_L10" clock="false" type="4"/>
+      <local id="130" name="_L9" clock="false" type="4"/>
+      <local id="131" name="_L8" clock="false" type="4"/>
+      <arrow id="132" name="PROVISIONAL2"/>
+      <arrow id="133" name="PROVISIONAL1"/>
+    </operator>
+    <operator id="134" name="regularMezcla" imported="false" root="false" expanded="false">
+      <input id="135" name="abrirO2" clock="false" type="4"/>
+      <input id="136" name="dutyO2" clock="false" type="14"/>
+      <input id="137" name="abrirAire" clock="false" type="4"/>
+      <input id="138" name="dutyAire" clock="false" type="14"/>
+      <output id="139" name="qO2adicional" clock="false" type="14"/>
+      <output id="140" name="qAireAdicional" clock="false" type="14"/>
+      <local id="141" name="_L2" clock="false" type="4"/>
+      <local id="142" name="_L3" clock="false" type="14"/>
+      <local id="143" name="_L4" clock="false" type="4"/>
+      <local id="144" name="_L5" clock="false" type="14"/>
+      <local id="145" name="_L6" clock="false" type="14"/>
+      <local id="146" name="_L7" clock="false" type="14"/>
+      <local id="147" name="_L8" clock="false" type="2"/>
+      <local id="148" name="_L9" clock="false" type="14"/>
+      <local id="149" name="_L13" clock="false" type="14"/>
+      <local id="150" name="_L12" clock="false" type="14"/>
+      <local id="151" name="_L11" clock="false" type="2"/>
+      <local id="152" name="_L10" clock="false" type="14"/>
+      <instance id="153" name="1" op="167" expanded="false"/>
+      <instance id="154" name="2" op="167" expanded="false"/>
+    </operator>
+    <package id="155" name="aux">
+      <operator id="156" name="flujo" imported="false" root="false" expanded="false">
+        <input id="157" name="q" clock="false" type="14"/>
+        <input id="158" name="p" clock="false" type="14"/>
+        <output id="159" name="flujo_q" clock="false" type="14"/>
+        <output id="160" name="flujo_p" clock="false" type="14"/>
+        <local id="161" name="_L2" clock="false" type="14"/>
+        <local id="162" name="_L4" clock="false" type="14"/>
+        <local id="163" name="_L3" clock="false" type="14"/>
+        <local id="164" name="_L8" clock="false" type="14"/>
+        <local id="165" name="_L10" clock="false" type="14"/>
+        <local id="166" name="_L11" clock="false" type="14"/>
+      </operator>
+      <operator id="167" name="empatar" imported="false" root="false" expanded="false">
+        <input id="168" name="llave" clock="false" type="14"/>
+        <input id="169" name="tabla" clock="false" type="2"/>
+        <output id="170" name="resultado" clock="false" type="14"/>
+        <local id="171" name="_L1" clock="false" type="14"/>
+        <local id="172" name="_L2" clock="false" type="2"/>
+        <local id="173" name="_L3" clock="false" type="14"/>
+        <local id="174" name="_L4" clock="false" type="14"/>
+        <local id="175" name="_L5" clock="false" type="1"/>
+        <iterator id="176" name="1" kind="mapfold" size="8">
+          <instance id="177" name="1" op="178" expanded="false"/>
+        </iterator>
+      </operator>
+      <operator id="178" name="comparar" imported="false" root="false" expanded="false">
+        <input id="179" name="acom" clock="false" type="14"/>
+        <input id="180" name="pareja" clock="false" type="3"/>
+        <input id="181" name="llave" clock="false" type="14"/>
+        <output id="182" name="resultado" clock="false" type="14"/>
+        <local id="183" name="_L1" clock="false" type="14"/>
+        <local id="184" name="_L2" clock="false" type="3"/>
+        <local id="185" name="_L3" clock="false" type="14"/>
+        <local id="186" name="_L5" clock="false" type="4"/>
+        <local id="187" name="_L6" clock="false" type="14"/>
+        <local id="188" name="_L7" clock="false" type="14"/>
+        <local id="189" name="_L4" clock="false" type="14"/>
+      </operator>
+      <operator id="190" name="contar" imported="false" root="false" expanded="false">
+        <input id="191" name="reiniciar" clock="false" type="4"/>
+        <output id="192" name="conteo" clock="false" type="8"/>
+        <local id="193" name="_L3" clock="false" type="8"/>
+        <local id="194" name="_L4" clock="false" type="8"/>
+        <local id="195" name="_L6" clock="false" type="8"/>
+        <local id="196" name="_L11" clock="false" type="8"/>
+        <local id="197" name="_L10" clock="false" type="4"/>
+        <local id="198" name="_L7" clock="false" type="8"/>
+        <local id="199" name="_L5" clock="false" type="8"/>
+        <local id="200" name="_L1" clock="false" type="8"/>
+        <pre id="201" name="1"/>
+        <arrow id="202" name="1"/>
+      </operator>
+    </package>
+  </model>
+  <generated>
+    <c>
+      <file id="203" name="general.h">
+        <function id="204" name="general_init">
+          <parameter id="205" name="outC" type="211" pointer="true"/>
+        </function>
+        <function id="206" name="general_reset">
+          <parameter id="207" name="outC" type="211" pointer="true"/>
+        </function>
+        <function id="208" name="general">
+          <parameter id="209" name="inC" type="273" pointer="true"/>
+          <parameter id="210" name="outC" type="211" pointer="true"/>
+        </function>
+        <struct id="211" name="outC_general">
+          <field id="212" name="abrirO2" type="506" pointer="false"/>
+          <field id="213" name="dutyO2" type="505" pointer="false"/>
+          <field id="214" name="abrirAire" type="506" pointer="false"/>
+          <field id="215" name="dutyAire" type="505" pointer="false"/>
+          <field id="216" name="abrirExpiracion" type="506" pointer="false"/>
+          <field id="217" name="init" type="506" pointer="false"/>
+          <field id="218" name="init1" type="506" pointer="false"/>
+          <field id="219" name="qTotal_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="220" name="regularEIngresar_reset_nxt_inspiracion_ventilador" type="506" pointer="false"/>
+          <field id="221" name="regularEIngresar_reset_act_inspiracion_ventilador" type="506" pointer="false"/>
+          <field id="222" name="regularEIngresar_state_nxt_inspiracion_ventilador" type="454" pointer="false"/>
+          <field id="223" name="ventilador_state_nxt" type="461" pointer="false"/>
+          <field id="224" name="ventilador_reset_act" type="506" pointer="false"/>
+          <field id="225" name="ventilador_reset_nxt" type="506" pointer="false"/>
+          <field id="226" name="_L3" type="506" pointer="false"/>
+          <field id="227" name="Context_regularMezcla_1" type="308" pointer="false"/>
+          <field id="228" name="Context_controlInspiracion_5" type="336" pointer="false"/>
+          <field id="229" name="Context_paramIniciales_4" type="363" pointer="false"/>
+          <field id="230" name="Context_contar_2" type="286" pointer="false"/>
+          <field id="231" name="regularEIngresar_clock_inspiracion_ventilador" type="454" pointer="false"/>
+          <field id="232" name="tr_1_clock_inspiracion_ventilador" type="506" pointer="false"/>
+          <field id="233" name="tr_1_clock_espiracion_ventilador" type="506" pointer="false"/>
+          <field id="234" name="tr_1_clock_pausaInspiracion_ventilador" type="506" pointer="false"/>
+          <field id="235" name="tr_1_clock_pausaEspiracion_ventilador" type="506" pointer="false"/>
+          <field id="236" name="ventilador_state_act" type="461" pointer="false"/>
+          <field id="237" name="_L29_inspiracion_ventilador" type="506" pointer="false"/>
+          <field id="238" name="regularEIngresar_fired_inspiracion_ventilador" type="457" pointer="false"/>
+          <field id="239" name="regularEIngresar_fired_strong_inspiracion_ventilador" type="457" pointer="false"/>
+          <field id="240" name="regularEIngresar_state_act_inspiracion_ventilador" type="454" pointer="false"/>
+          <field id="241" name="regularEIngresar_state_sel_inspiracion_ventilador" type="454" pointer="false"/>
+          <field id="242" name="_L2_ingresar_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="243" name="_L20_regular_regularEIngresar_inspiracion_ventilador" type="506" pointer="false"/>
+          <field id="244" name="_L21_regular_regularEIngresar_inspiracion_ventilador" type="506" pointer="false"/>
+          <field id="245" name="_L22_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="246" name="_L23_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="247" name="_L19_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="248" name="_L18_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="249" name="_L17_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="250" name="_L16_regular_regularEIngresar_inspiracion_ventilador" type="497" pointer="false"/>
+          <field id="251" name="_L12_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="252" name="_L13_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="253" name="_L14_regular_regularEIngresar_inspiracion_ventilador" type="497" pointer="false"/>
+          <field id="254" name="_L15_regular_regularEIngresar_inspiracion_ventilador" type="497" pointer="false"/>
+          <field id="255" name="_L11_regular_regularEIngresar_inspiracion_ventilador" type="497" pointer="false"/>
+          <field id="256" name="_L10_regular_regularEIngresar_inspiracion_ventilador" type="497" pointer="false"/>
+          <field id="257" name="_L25_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="258" name="_L24_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="259" name="_L33_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="260" name="_L37_regular_regularEIngresar_inspiracion_ventilador" type="505" pointer="false"/>
+          <field id="261" name="_L4_espiracion_ventilador" type="505" pointer="false"/>
+          <field id="262" name="_L3_espiracion_ventilador" type="506" pointer="false"/>
+          <field id="263" name="_L2_espiracion_ventilador" type="506" pointer="false"/>
+          <field id="264" name="reiniciarReloj" type="506" pointer="false"/>
+          <field id="265" name="ventilador_state_sel" type="461" pointer="false"/>
+          <field id="266" name="ventilador_fired_strong" type="466" pointer="false"/>
+          <field id="267" name="ventilador_fired" type="466" pointer="false"/>
+          <field id="268" name="reloj" type="497" pointer="false"/>
+          <field id="269" name="_L2" type="497" pointer="false"/>
+          <field id="270" name="_L17" type="506" pointer="false"/>
+          <field id="271" name="_L18" type="506" pointer="false"/>
+          <field id="272" name="_L20" type="506" pointer="false"/>
+        </struct>
+        <struct id="273" name="inC_general">
+          <field id="274" name="q" type="505" pointer="false"/>
+          <field id="275" name="fio2" type="505" pointer="false"/>
+          <field id="276" name="ti" type="497" pointer="false"/>
+          <field id="277" name="te" type="497" pointer="false"/>
+        </struct>
+      </file>
+      <file id="278" name="contar_aux.h">
+        <function id="279" name="contar_init_aux">
+          <parameter id="280" name="outC" type="286" pointer="true"/>
+        </function>
+        <function id="281" name="contar_reset_aux">
+          <parameter id="282" name="outC" type="286" pointer="true"/>
+        </function>
+        <function id="283" name="contar_aux">
+          <parameter id="284" name="reiniciar" type="506" pointer="false"/>
+          <parameter id="285" name="outC" type="286" pointer="true"/>
+        </function>
+        <struct id="286" name="outC_contar_aux">
+          <field id="287" name="conteo" type="497" pointer="false"/>
+          <field id="288" name="init" type="506" pointer="false"/>
+          <field id="289" name="_L7" type="497" pointer="false"/>
+          <field id="290" name="_L3" type="497" pointer="false"/>
+          <field id="291" name="_L4" type="497" pointer="false"/>
+          <field id="292" name="_L6" type="497" pointer="false"/>
+          <field id="293" name="_L11" type="497" pointer="false"/>
+          <field id="294" name="_L10" type="506" pointer="false"/>
+          <field id="295" name="_L5" type="497" pointer="false"/>
+          <field id="296" name="_L1" type="497" pointer="false"/>
+        </struct>
+      </file>
+      <file id="297" name="regularMezcla.h">
+        <function id="298" name="regularMezcla_init">
+          <parameter id="299" name="outC" type="308" pointer="true"/>
+        </function>
+        <function id="300" name="regularMezcla_reset">
+          <parameter id="301" name="outC" type="308" pointer="true"/>
+        </function>
+        <function id="302" name="regularMezcla">
+          <parameter id="303" name="abrirO2" type="506" pointer="false"/>
+          <parameter id="304" name="dutyO2" type="505" pointer="false"/>
+          <parameter id="305" name="abrirAire" type="506" pointer="false"/>
+          <parameter id="306" name="dutyAire" type="505" pointer="false"/>
+          <parameter id="307" name="outC" type="308" pointer="true"/>
+        </function>
+        <struct id="308" name="outC_regularMezcla">
+          <field id="309" name="qO2adicional" type="505" pointer="false"/>
+          <field id="310" name="qAireAdicional" type="505" pointer="false"/>
+          <field id="311" name="Context_empatar_1" type="390" pointer="false"/>
+          <field id="312" name="Context_empatar_2" type="390" pointer="false"/>
+          <field id="313" name="_L2" type="506" pointer="false"/>
+          <field id="314" name="_L3" type="505" pointer="false"/>
+          <field id="315" name="_L4" type="506" pointer="false"/>
+          <field id="316" name="_L5" type="505" pointer="false"/>
+          <field id="317" name="_L6" type="505" pointer="false"/>
+          <field id="318" name="_L7" type="505" pointer="false"/>
+          <field id="319" name="_L8" type="452" pointer="false"/>
+          <field id="320" name="_L9" type="505" pointer="false"/>
+          <field id="321" name="_L13" type="505" pointer="false"/>
+          <field id="322" name="_L12" type="505" pointer="false"/>
+          <field id="323" name="_L11" type="452" pointer="false"/>
+          <field id="324" name="_L10" type="505" pointer="false"/>
+        </struct>
+      </file>
+      <file id="325" name="controlInspiracion.h">
+        <function id="326" name="controlInspiracion_init">
+          <parameter id="327" name="outC" type="336" pointer="true"/>
+        </function>
+        <function id="328" name="controlInspiracion_reset">
+          <parameter id="329" name="outC" type="336" pointer="true"/>
+        </function>
+        <function id="330" name="controlInspiracion">
+          <parameter id="331" name="_1_qPulmon" type="505" pointer="false"/>
+          <parameter id="332" name="_2_nPulmon" type="497" pointer="false"/>
+          <parameter id="333" name="dutyParam" type="505" pointer="false"/>
+          <parameter id="334" name="fio2Param" type="505" pointer="false"/>
+          <parameter id="335" name="outC" type="336" pointer="true"/>
+        </function>
+        <struct id="336" name="outC_controlInspiracion">
+          <field id="337" name="abrirO2" type="506" pointer="false"/>
+          <field id="338" name="dutyO2" type="505" pointer="false"/>
+          <field id="339" name="abrirAire" type="506" pointer="false"/>
+          <field id="340" name="dutyAire" type="505" pointer="false"/>
+          <field id="341" name="init" type="506" pointer="false"/>
+          <field id="342" name="_L1" type="505" pointer="false"/>
+          <field id="343" name="_L2" type="497" pointer="false"/>
+          <field id="344" name="_L3" type="505" pointer="false"/>
+          <field id="345" name="_L4" type="505" pointer="false"/>
+          <field id="346" name="_L5" type="505" pointer="false"/>
+          <field id="347" name="_L6" type="505" pointer="false"/>
+          <field id="348" name="_L7" type="505" pointer="false"/>
+          <field id="349" name="_L10" type="506" pointer="false"/>
+          <field id="350" name="_L9" type="506" pointer="false"/>
+          <field id="351" name="_L8" type="506" pointer="false"/>
+        </struct>
+      </file>
+      <file id="352" name="paramIniciales.h">
+        <function id="353" name="paramIniciales_init">
+          <parameter id="354" name="outC" type="363" pointer="true"/>
+        </function>
+        <function id="355" name="paramIniciales_reset">
+          <parameter id="356" name="outC" type="363" pointer="true"/>
+        </function>
+        <function id="357" name="paramIniciales">
+          <parameter id="358" name="q" type="505" pointer="false"/>
+          <parameter id="359" name="FIO2" type="505" pointer="false"/>
+          <parameter id="360" name="tiempos_i" type="497" pointer="false"/>
+          <parameter id="361" name="tiempos_e" type="497" pointer="false"/>
+          <parameter id="362" name="outC" type="363" pointer="true"/>
+        </function>
+        <struct id="363" name="outC_paramIniciales">
+          <field id="364" name="dutyTotal" type="505" pointer="false"/>
+          <field id="365" name="fio2" type="505" pointer="false"/>
+          <field id="366" name="ti" type="497" pointer="false"/>
+          <field id="367" name="te" type="497" pointer="false"/>
+          <field id="368" name="Context_empatar_1" type="390" pointer="false"/>
+          <field id="369" name="Context_empatar_2" type="390" pointer="false"/>
+          <field id="370" name="Context_flujo_1" type="426" pointer="false"/>
+          <field id="371" name="_L1" type="505" pointer="false"/>
+          <field id="372" name="_L2" type="505" pointer="false"/>
+          <field id="373" name="_L4" type="505" pointer="false"/>
+          <field id="374" name="_L5" type="505" pointer="false"/>
+          <field id="375" name="_L6" type="505" pointer="false"/>
+          <field id="376" name="_L8" type="505" pointer="false"/>
+          <field id="377" name="_L10" type="497" pointer="false"/>
+          <field id="378" name="_L11" type="497" pointer="false"/>
+          <field id="379" name="_L13" type="452" pointer="false"/>
+          <field id="380" name="_L16" type="452" pointer="false"/>
+        </struct>
+      </file>
+      <file id="381" name="empatar_aux.h">
+        <function id="382" name="empatar_init_aux">
+          <parameter id="383" name="outC" type="390" pointer="true"/>
+        </function>
+        <function id="384" name="empatar_reset_aux">
+          <parameter id="385" name="outC" type="390" pointer="true"/>
+        </function>
+        <function id="386" name="empatar_aux">
+          <parameter id="387" name="llave" type="505" pointer="false"/>
+          <parameter id="388" name="tabla1" type="452" pointer="true"/>
+          <parameter id="389" name="outC" type="390" pointer="true"/>
+        </function>
+        <struct id="390" name="outC_empatar_aux">
+          <field id="391" name="resultado" type="505" pointer="false"/>
+          <field id="392" name="Context_comparar_1" type="408" pointer="false" size="[8]"/>
+          <field id="393" name="_L1" type="505" pointer="false"/>
+          <field id="394" name="_L2" type="452" pointer="false"/>
+          <field id="395" name="_L3" type="505" pointer="false"/>
+          <field id="396" name="_L4" type="505" pointer="false"/>
+          <field id="397" name="_L5" type="451" pointer="false"/>
+        </struct>
+      </file>
+      <file id="398" name="comparar_aux.h">
+        <function id="399" name="comparar_init_aux">
+          <parameter id="400" name="outC" type="408" pointer="true"/>
+        </function>
+        <function id="401" name="comparar_reset_aux">
+          <parameter id="402" name="outC" type="408" pointer="true"/>
+        </function>
+        <function id="403" name="comparar_aux">
+          <parameter id="404" name="acom" type="505" pointer="false"/>
+          <parameter id="405" name="pareja" type="453" pointer="true"/>
+          <parameter id="406" name="llave" type="505" pointer="false"/>
+          <parameter id="407" name="outC" type="408" pointer="true"/>
+        </function>
+        <struct id="408" name="outC_comparar_aux">
+          <field id="409" name="resultado" type="505" pointer="false"/>
+          <field id="410" name="_L1" type="505" pointer="false"/>
+          <field id="411" name="_L2" type="453" pointer="false"/>
+          <field id="412" name="_L3" type="505" pointer="false"/>
+          <field id="413" name="_L5" type="506" pointer="false"/>
+          <field id="414" name="_L6" type="505" pointer="false"/>
+          <field id="415" name="_L7" type="505" pointer="false"/>
+          <field id="416" name="_L4" type="505" pointer="false"/>
+        </struct>
+      </file>
+      <file id="417" name="flujo_aux.h">
+        <function id="418" name="flujo_init_aux">
+          <parameter id="419" name="outC" type="426" pointer="true"/>
+        </function>
+        <function id="420" name="flujo_reset_aux">
+          <parameter id="421" name="outC" type="426" pointer="true"/>
+        </function>
+        <function id="422" name="flujo_aux">
+          <parameter id="423" name="q" type="505" pointer="false"/>
+          <parameter id="424" name="p" type="505" pointer="false"/>
+          <parameter id="425" name="outC" type="426" pointer="true"/>
+        </function>
+        <struct id="426" name="outC_flujo_aux">
+          <field id="427" name="flujo_q" type="505" pointer="false"/>
+          <field id="428" name="flujo_p" type="505" pointer="false"/>
+          <field id="429" name="_L2" type="505" pointer="false"/>
+          <field id="430" name="_L4" type="505" pointer="false"/>
+          <field id="431" name="_L3" type="505" pointer="false"/>
+          <field id="432" name="_L8" type="505" pointer="false"/>
+          <field id="433" name="_L10" type="505" pointer="false"/>
+          <field id="434" name="_L11" type="505" pointer="false"/>
+        </struct>
+      </file>
+      <file id="435" name="kcg_types.h">
+        <ifdef id="436" name="kcg_use_array_float32_2_8">
+          <function id="437" name="kcg_comp_array_float32_2_8" returnType="506">
+            <parameter id="446" name="kcg_c1" type="452" pointer="true"/>
+            <parameter id="447" name="kcg_c2" type="452" pointer="true"/>
+          </function>
+        </ifdef>
+        <ifdef id="440" name="kcg_use_array_float32_2">
+          <function id="441" name="kcg_comp_array_float32_2" returnType="506">
+            <parameter id="446" name="kcg_c1" type="453" pointer="true"/>
+            <parameter id="447" name="kcg_c2" type="453" pointer="true"/>
+          </function>
+        </ifdef>
+        <ifdef id="444" name="kcg_use_array_float32_8">
+          <function id="445" name="kcg_comp_array_float32_8" returnType="506">
+            <parameter id="446" name="kcg_c1" type="451" pointer="true"/>
+            <parameter id="447" name="kcg_c2" type="451" pointer="true"/>
+          </function>
+        </ifdef>
+        <macro id="448" name="kcg_copy_array_float32_2_8"/>
+        <macro id="449" name="kcg_copy_array_float32_2"/>
+        <macro id="450" name="kcg_copy_array_float32_8"/>
+        <array id="451" name="array_float32_8" baseType="505" size="8"/>
+        <array id="452" name="array_float32_2_8" baseType="453" size="8"/>
+        <array id="453" name="array_float32_2" baseType="505" size="2"/>
+        <enum id="454" name="SSM_ST_regularEIngresar_inspiracion_ventilador"
+            tagName="kcg_tag_SSM_ST_regularEIngresar_inspiracion_ventilador">
+          <value id="455" name="SSM_st_regular_regularEIngresar_inspiracion_ventilador"/>
+          <value id="456" name="SSM_st_ingresar_regularEIngresar_inspiracion_ventilador"/>
+        </enum>
+        <enum id="457" name="SSM_TR_regularEIngresar_inspiracion_ventilador"
+            tagName="kcg_tag_SSM_TR_regularEIngresar_inspiracion_ventilador">
+          <value id="458" name="SSM_TR_no_trans_regularEIngresar_inspiracion_ventilador"/>
+          <value id="459" name="SSM_TR_regular_ingresar_1_regular_regularEIngresar_inspiracion_ventilador"/>
+          <value id="460" name="SSM_TR_ingresar_regular_1_ingresar_regularEIngresar_inspiracion_ventilador"/>
+        </enum>
+        <enum id="461" name="SSM_ST_ventilador" tagName="kcg_tag_SSM_ST_ventilador">
+          <value id="462" name="SSM_st_inspiracion_ventilador"/>
+          <value id="463" name="SSM_st_espiracion_ventilador"/>
+          <value id="464" name="SSM_st_pausaInspiracion_ventilador"/>
+          <value id="465" name="SSM_st_pausaEspiracion_ventilador"/>
+        </enum>
+        <enum id="466" name="SSM_TR_ventilador" tagName="kcg_tag_SSM_TR_ventilador">
+          <value id="467" name="SSM_TR_no_trans_ventilador"/>
+          <value id="468" name="SSM_TR_inspiracion_pausaInspiracion_1_inspiracion_ventilador"/>
+          <value id="469" name="SSM_TR_espiracion_pausaEspiracion_1_espiracion_ventilador"/>
+          <value id="470" name="SSM_TR_pausaInspiracion_espiracion_1_pausaInspiracion_ventilador"/>
+          <value id="471" name="SSM_TR_pausaEspiracion_inspiracion_1_pausaEspiracion_ventilador"/>
+        </enum>
+        <macro id="472" name="kcg_assign_array"/>
+        <macro id="473" name="kcg_assign_struct"/>
+        <macro id="474" name="kcg_lnot_uint8"/>
+        <macro id="475" name="kcg_lnot_uint16"/>
+        <macro id="476" name="kcg_lnot_uint32"/>
+        <macro id="477" name="kcg_lnot_uint64"/>
+        <macro id="478" name="kcg_lsl_uint8"/>
+        <macro id="479" name="kcg_lsl_uint16"/>
+        <macro id="480" name="kcg_lsl_uint32"/>
+        <macro id="481" name="kcg_lsl_uint64"/>
+        <macro id="482" name="kcg_true"/>
+        <macro id="483" name="kcg_false"/>
+        <macro id="484" name="kcg_lit_int8"/>
+        <macro id="485" name="kcg_lit_int16"/>
+        <macro id="486" name="kcg_lit_int32"/>
+        <macro id="487" name="kcg_lit_int64"/>
+        <macro id="488" name="kcg_lit_uint8"/>
+        <macro id="489" name="kcg_lit_uint16"/>
+        <macro id="490" name="kcg_lit_uint32"/>
+        <macro id="491" name="kcg_lit_uint64"/>
+        <macro id="492" name="kcg_lit_size"/>
+        <macro id="493" name="kcg_lit_float64"/>
+        <macro id="494" name="kcg_lit_float32"/>
+        <predefType id="495" name="kcg_int8"/>
+        <predefType id="496" name="kcg_int16"/>
+        <predefType id="497" name="kcg_int32"/>
+        <predefType id="498" name="kcg_int64"/>
+        <predefType id="499" name="kcg_uint8"/>
+        <predefType id="500" name="kcg_uint16"/>
+        <predefType id="501" name="kcg_uint32"/>
+        <predefType id="502" name="kcg_uint64"/>
+        <predefType id="503" name="kcg_size"/>
+        <predefType id="504" name="kcg_float64"/>
+        <predefType id="505" name="kcg_float32"/>
+        <predefType id="506" name="kcg_bool"/>
+        <predefType id="507" name="kcg_char"/>
+        <macro id="508" name="KCG_MAPW_CPY"/>
+      </file>
+      <file id="509" name="kcg_consts.h">
+        <macro id="510" name="tiempoPausaInspiracion" type="497"/>
+        <macro id="511" name="tiempoPausaExpiracion" type="497"/>
+        <constant id="512" name="tabla" type="452" pointer="false"/>
+        <constant id="513" name="tablaInversa" type="452" pointer="false"/>
+      </file>
+      <file id="514" name="kcg_sensors.h">
+        <global id="515" name="nPulmon" type="497" pointer="false"/>
+        <global id="516" name="qPulmon" type="505" pointer="false"/>
+      </file>
+    </c>
+    <map srcId="504" dstId="493" role="wrapped-lit"/>
+    <map srcId="505" dstId="494" role="wrapped-lit"/>
+    <map srcId="503" dstId="492" role="wrapped-lit"/>
+    <map srcId="502" dstId="491" role="wrapped-lit"/>
+    <map srcId="502" dstId="477" role="wrapped-lnot"/>
+    <map srcId="502" dstId="481" role="wrapped-lsl"/>
+    <map srcId="501" dstId="490" role="wrapped-lit"/>
+    <map srcId="501" dstId="476" role="wrapped-lnot"/>
+    <map srcId="501" dstId="480" role="wrapped-lsl"/>
+    <map srcId="500" dstId="489" role="wrapped-lit"/>
+    <map srcId="500" dstId="475" role="wrapped-lnot"/>
+    <map srcId="500" dstId="479" role="wrapped-lsl"/>
+    <map srcId="499" dstId="488" role="wrapped-lit"/>
+    <map srcId="499" dstId="474" role="wrapped-lnot"/>
+    <map srcId="499" dstId="478" role="wrapped-lsl"/>
+    <map srcId="498" dstId="487" role="wrapped-lit"/>
+    <map srcId="497" dstId="486" role="wrapped-lit"/>
+    <map srcId="496" dstId="485" role="wrapped-lit"/>
+    <map srcId="495" dstId="484" role="wrapped-lit"/>
+    <map srcId="452" dstId="436" role="type-use"/>
+    <map srcId="452" dstId="437" role="type-comparison"/>
+    <map srcId="452" dstId="448" role="type-copy"/>
+    <map srcId="453" dstId="440" role="type-use"/>
+    <map srcId="453" dstId="441" role="type-comparison"/>
+    <map srcId="453" dstId="449" role="type-copy"/>
+    <map srcId="451" dstId="444" role="type-use"/>
+    <map srcId="451" dstId="445" role="type-comparison"/>
+    <map srcId="451" dstId="450" role="type-copy"/>
+    <map srcId="263" dstId="236" role="clock"/>
+    <map srcId="263" dstId="463" role="clock-value"/>
+    <map srcId="262" dstId="236" role="clock"/>
+    <map srcId="262" dstId="463" role="clock-value"/>
+    <map srcId="261" dstId="236" role="clock"/>
+    <map srcId="261" dstId="463" role="clock-value"/>
+    <map srcId="260" dstId="231" role="clock"/>
+    <map srcId="260" dstId="455" role="clock-value"/>
+    <map srcId="259" dstId="231" role="clock"/>
+    <map srcId="259" dstId="455" role="clock-value"/>
+    <map srcId="258" dstId="231" role="clock"/>
+    <map srcId="258" dstId="455" role="clock-value"/>
+    <map srcId="257" dstId="231" role="clock"/>
+    <map srcId="257" dstId="455" role="clock-value"/>
+    <map srcId="256" dstId="231" role="clock"/>
+    <map srcId="256" dstId="455" role="clock-value"/>
+    <map srcId="255" dstId="231" role="clock"/>
+    <map srcId="255" dstId="455" role="clock-value"/>
+    <map srcId="254" dstId="231" role="clock"/>
+    <map srcId="254" dstId="455" role="clock-value"/>
+    <map srcId="253" dstId="231" role="clock"/>
+    <map srcId="253" dstId="455" role="clock-value"/>
+    <map srcId="252" dstId="231" role="clock"/>
+    <map srcId="252" dstId="455" role="clock-value"/>
+    <map srcId="251" dstId="231" role="clock"/>
+    <map srcId="251" dstId="455" role="clock-value"/>
+    <map srcId="250" dstId="231" role="clock"/>
+    <map srcId="250" dstId="455" role="clock-value"/>
+    <map srcId="249" dstId="231" role="clock"/>
+    <map srcId="249" dstId="455" role="clock-value"/>
+    <map srcId="248" dstId="231" role="clock"/>
+    <map srcId="248" dstId="455" role="clock-value"/>
+    <map srcId="247" dstId="231" role="clock"/>
+    <map srcId="247" dstId="455" role="clock-value"/>
+    <map srcId="246" dstId="231" role="clock"/>
+    <map srcId="246" dstId="455" role="clock-value"/>
+    <map srcId="245" dstId="231" role="clock"/>
+    <map srcId="245" dstId="455" role="clock-value"/>
+    <map srcId="244" dstId="231" role="clock"/>
+    <map srcId="244" dstId="455" role="clock-value"/>
+    <map srcId="243" dstId="231" role="clock"/>
+    <map srcId="243" dstId="455" role="clock-value"/>
+    <map srcId="242" dstId="231" role="clock"/>
+    <map srcId="242" dstId="456" role="clock-value"/>
+    <map srcId="241" dstId="236" role="clock"/>
+    <map srcId="241" dstId="462" role="clock-value"/>
+    <map srcId="240" dstId="236" role="clock"/>
+    <map srcId="240" dstId="462" role="clock-value"/>
+    <map srcId="239" dstId="236" role="clock"/>
+    <map srcId="239" dstId="462" role="clock-value"/>
+    <map srcId="238" dstId="236" role="clock"/>
+    <map srcId="238" dstId="462" role="clock-value"/>
+    <map srcId="237" dstId="236" role="clock"/>
+    <map srcId="237" dstId="462" role="clock-value"/>
+    <map srcId="235" dstId="236" role="clock"/>
+    <map srcId="235" dstId="465" role="clock-value"/>
+    <map srcId="234" dstId="236" role="clock"/>
+    <map srcId="234" dstId="464" role="clock-value"/>
+    <map srcId="233" dstId="236" role="clock"/>
+    <map srcId="233" dstId="463" role="clock-value"/>
+    <map srcId="232" dstId="236" role="clock"/>
+    <map srcId="232" dstId="462" role="clock-value"/>
+    <map srcId="231" dstId="236" role="clock"/>
+    <map srcId="231" dstId="462" role="clock-value"/>
+    <map srcId="229" dstId="231" role="clock"/>
+    <map srcId="229" dstId="455" role="clock-value"/>
+    <map srcId="228" dstId="231" role="clock"/>
+    <map srcId="228" dstId="455" role="clock-value"/>
+    <map srcId="227" dstId="231" role="clock"/>
+    <map srcId="227" dstId="455" role="clock-value"/>
+    <map srcId="222" dstId="236" role="clock"/>
+    <map srcId="222" dstId="462" role="clock-value"/>
+    <map srcId="219" dstId="236" role="clock"/>
+    <map srcId="219" dstId="462" role="clock-value"/>
+  </generated>
+  <map modelId="69" generatedId="459"/>
+  <map modelId="70" generatedId="456"/>
+  <map modelId="44" generatedId="458" role="autom-no-trans-enum"/>
+  <map modelId="73" generatedId="460"/>
+  <map modelId="45" generatedId="455"/>
+  <map modelId="75" generatedId="468"/>
+  <map modelId="81" generatedId="469"/>
+  <map modelId="84" generatedId="470"/>
+  <map modelId="40" generatedId="467" role="autom-no-trans-enum"/>
+  <map modelId="87" generatedId="471"/>
+  <map modelId="41" generatedId="462"/>
+  <map modelId="76" generatedId="463"/>
+  <map modelId="82" generatedId="464"/>
+  <map modelId="85" generatedId="465"/>
+  <map modelId="23" generatedId="205" role="context-parameter"/>
+  <map modelId="23" generatedId="204" role="init-method"/>
+  <map modelId="23" generatedId="207" role="context-parameter"/>
+  <map modelId="23" generatedId="206" role="reset-method"/>
+  <map modelId="23" generatedId="209" role="input-struct-parameter"/>
+  <map modelId="27" generatedId="277"/>
+  <map modelId="26" generatedId="276"/>
+  <map modelId="25" generatedId="275"/>
+  <map modelId="24" generatedId="274"/>
+  <map modelId="23" generatedId="273" role="input-struct-type"/>
+  <map modelId="23" generatedId="210" role="context-parameter"/>
+  <map modelId="39" generatedId="272"/>
+  <map modelId="38" generatedId="271"/>
+  <map modelId="37" generatedId="270"/>
+  <map modelId="35" generatedId="269"/>
+  <map modelId="34" generatedId="268"/>
+  <map modelId="40" generatedId="267" role="autom-weak-transition"/>
+  <map modelId="40" generatedId="266" role="autom-strong-transition"/>
+  <map modelId="40" generatedId="265" role="autom-selected-state"/>
+  <map modelId="33" generatedId="264"/>
+  <map modelId="77" generatedId="263"/>
+  <map modelId="78" generatedId="262"/>
+  <map modelId="79" generatedId="261"/>
+  <map modelId="63" generatedId="260"/>
+  <map modelId="62" generatedId="259"/>
+  <map modelId="61" generatedId="258"/>
+  <map modelId="60" generatedId="257"/>
+  <map modelId="59" generatedId="256"/>
+  <map modelId="58" generatedId="255"/>
+  <map modelId="57" generatedId="254"/>
+  <map modelId="56" generatedId="253"/>
+  <map modelId="55" generatedId="252"/>
+  <map modelId="54" generatedId="251"/>
+  <map modelId="53" generatedId="250"/>
+  <map modelId="52" generatedId="249"/>
+  <map modelId="51" generatedId="248"/>
+  <map modelId="50" generatedId="247"/>
+  <map modelId="49" generatedId="246"/>
+  <map modelId="48" generatedId="245"/>
+  <map modelId="47" generatedId="244"/>
+  <map modelId="46" generatedId="243"/>
+  <map modelId="71" generatedId="242"/>
+  <map modelId="44" generatedId="241" role="autom-selected-state"/>
+  <map modelId="44" generatedId="240" role="autom-active-state"/>
+  <map modelId="44" generatedId="239" role="autom-strong-transition"/>
+  <map modelId="44" generatedId="238" role="autom-weak-transition"/>
+  <map modelId="43" generatedId="237"/>
+  <map modelId="40" generatedId="236" role="autom-active-state"/>
+  <map modelId="88" generatedId="230"/>
+  <map modelId="64" generatedId="229"/>
+  <map modelId="65" generatedId="228"/>
+  <map modelId="66" generatedId="227"/>
+  <map modelId="36" generatedId="226"/>
+  <map modelId="90" generatedId="226" role="memory"/>
+  <map modelId="40" generatedId="225" role="autom-next-reset"/>
+  <map modelId="40" generatedId="224" role="autom-active-reset"/>
+  <map modelId="40" generatedId="223" role="autom-next-state"/>
+  <map modelId="44" generatedId="222" role="autom-next-state"/>
+  <map modelId="44" generatedId="221" role="autom-active-reset"/>
+  <map modelId="44" generatedId="220" role="autom-next-reset"/>
+  <map modelId="42" generatedId="219"/>
+  <map modelId="67" generatedId="219" role="memory"/>
+  <map modelId="44" generatedId="218" role="init"/>
+  <map modelId="89" generatedId="217" role="init"/>
+  <map modelId="32" generatedId="216"/>
+  <map modelId="40" generatedId="216" role="memory"/>
+  <map modelId="31" generatedId="215"/>
+  <map modelId="40" generatedId="215" role="memory"/>
+  <map modelId="44" generatedId="215" role="memory"/>
+  <map modelId="30" generatedId="214"/>
+  <map modelId="40" generatedId="214" role="memory"/>
+  <map modelId="44" generatedId="214" role="memory"/>
+  <map modelId="29" generatedId="213"/>
+  <map modelId="40" generatedId="213" role="memory"/>
+  <map modelId="44" generatedId="213" role="memory"/>
+  <map modelId="28" generatedId="212"/>
+  <map modelId="40" generatedId="212" role="memory"/>
+  <map modelId="44" generatedId="212" role="memory"/>
+  <map modelId="23" generatedId="211" role="context-type"/>
+  <map modelId="23" generatedId="203" role="interface-file"/>
+  <map modelId="23" generatedId="208" role="cycle-method"/>
+  <map modelId="190" generatedId="280" role="context-parameter"/>
+  <map modelId="190" generatedId="279" role="init-method"/>
+  <map modelId="190" generatedId="282" role="context-parameter"/>
+  <map modelId="190" generatedId="281" role="reset-method"/>
+  <map modelId="191" generatedId="284"/>
+  <map modelId="190" generatedId="285" role="context-parameter"/>
+  <map modelId="200" generatedId="296"/>
+  <map modelId="199" generatedId="295"/>
+  <map modelId="197" generatedId="294"/>
+  <map modelId="196" generatedId="293"/>
+  <map modelId="195" generatedId="292"/>
+  <map modelId="194" generatedId="291"/>
+  <map modelId="193" generatedId="290"/>
+  <map modelId="198" generatedId="289"/>
+  <map modelId="201" generatedId="289" role="memory"/>
+  <map modelId="202" generatedId="288" role="init"/>
+  <map modelId="192" generatedId="287"/>
+  <map modelId="190" generatedId="286" role="context-type"/>
+  <map modelId="190" generatedId="278" role="interface-file"/>
+  <map modelId="190" generatedId="283" role="cycle-method"/>
+  <map modelId="134" generatedId="299" role="context-parameter"/>
+  <map modelId="134" generatedId="298" role="init-method"/>
+  <map modelId="134" generatedId="301" role="context-parameter"/>
+  <map modelId="134" generatedId="300" role="reset-method"/>
+  <map modelId="138" generatedId="306"/>
+  <map modelId="137" generatedId="305"/>
+  <map modelId="136" generatedId="304"/>
+  <map modelId="135" generatedId="303"/>
+  <map modelId="134" generatedId="307" role="context-parameter"/>
+  <map modelId="152" generatedId="324"/>
+  <map modelId="151" generatedId="323"/>
+  <map modelId="150" generatedId="322"/>
+  <map modelId="149" generatedId="321"/>
+  <map modelId="148" generatedId="320"/>
+  <map modelId="147" generatedId="319"/>
+  <map modelId="146" generatedId="318"/>
+  <map modelId="145" generatedId="317"/>
+  <map modelId="144" generatedId="316"/>
+  <map modelId="143" generatedId="315"/>
+  <map modelId="142" generatedId="314"/>
+  <map modelId="141" generatedId="313"/>
+  <map modelId="154" generatedId="312"/>
+  <map modelId="153" generatedId="311"/>
+  <map modelId="140" generatedId="310"/>
+  <map modelId="139" generatedId="309"/>
+  <map modelId="134" generatedId="308" role="context-type"/>
+  <map modelId="134" generatedId="297" role="interface-file"/>
+  <map modelId="134" generatedId="302" role="cycle-method"/>
+  <map modelId="113" generatedId="327" role="context-parameter"/>
+  <map modelId="113" generatedId="326" role="init-method"/>
+  <map modelId="113" generatedId="329" role="context-parameter"/>
+  <map modelId="113" generatedId="328" role="reset-method"/>
+  <map modelId="117" generatedId="334"/>
+  <map modelId="116" generatedId="333"/>
+  <map modelId="115" generatedId="332"/>
+  <map modelId="114" generatedId="331"/>
+  <map modelId="113" generatedId="335" role="context-parameter"/>
+  <map modelId="131" generatedId="351"/>
+  <map modelId="130" generatedId="350"/>
+  <map modelId="129" generatedId="349"/>
+  <map modelId="128" generatedId="348"/>
+  <map modelId="127" generatedId="347"/>
+  <map modelId="126" generatedId="346"/>
+  <map modelId="125" generatedId="345"/>
+  <map modelId="124" generatedId="344"/>
+  <map modelId="123" generatedId="343"/>
+  <map modelId="122" generatedId="342"/>
+  <map modelId="132" generatedId="341" role="init"/>
+  <map modelId="133" generatedId="341" role="init"/>
+  <map modelId="121" generatedId="340"/>
+  <map modelId="120" generatedId="339"/>
+  <map modelId="119" generatedId="338"/>
+  <map modelId="118" generatedId="337"/>
+  <map modelId="113" generatedId="336" role="context-type"/>
+  <map modelId="113" generatedId="325" role="interface-file"/>
+  <map modelId="113" generatedId="330" role="cycle-method"/>
+  <map modelId="91" generatedId="354" role="context-parameter"/>
+  <map modelId="91" generatedId="353" role="init-method"/>
+  <map modelId="91" generatedId="356" role="context-parameter"/>
+  <map modelId="91" generatedId="355" role="reset-method"/>
+  <map modelId="95" generatedId="361"/>
+  <map modelId="94" generatedId="360"/>
+  <map modelId="93" generatedId="359"/>
+  <map modelId="92" generatedId="358"/>
+  <map modelId="91" generatedId="362" role="context-parameter"/>
+  <map modelId="109" generatedId="380"/>
+  <map modelId="108" generatedId="379"/>
+  <map modelId="107" generatedId="378"/>
+  <map modelId="106" generatedId="377"/>
+  <map modelId="105" generatedId="376"/>
+  <map modelId="104" generatedId="375"/>
+  <map modelId="103" generatedId="374"/>
+  <map modelId="102" generatedId="373"/>
+  <map modelId="101" generatedId="372"/>
+  <map modelId="100" generatedId="371"/>
+  <map modelId="110" generatedId="370"/>
+  <map modelId="112" generatedId="369"/>
+  <map modelId="111" generatedId="368"/>
+  <map modelId="99" generatedId="367"/>
+  <map modelId="98" generatedId="366"/>
+  <map modelId="97" generatedId="365"/>
+  <map modelId="96" generatedId="364"/>
+  <map modelId="91" generatedId="363" role="context-type"/>
+  <map modelId="91" generatedId="352" role="interface-file"/>
+  <map modelId="91" generatedId="357" role="cycle-method"/>
+  <map modelId="167" generatedId="383" role="context-parameter"/>
+  <map modelId="167" generatedId="382" role="init-method"/>
+  <map modelId="167" generatedId="385" role="context-parameter"/>
+  <map modelId="167" generatedId="384" role="reset-method"/>
+  <map modelId="169" generatedId="388"/>
+  <map modelId="168" generatedId="387"/>
+  <map modelId="167" generatedId="389" role="context-parameter"/>
+  <map modelId="175" generatedId="397"/>
+  <map modelId="174" generatedId="396"/>
+  <map modelId="173" generatedId="395"/>
+  <map modelId="172" generatedId="394"/>
+  <map modelId="171" generatedId="393"/>
+  <map modelId="177" generatedId="392"/>
+  <map modelId="170" generatedId="391"/>
+  <map modelId="167" generatedId="390" role="context-type"/>
+  <map modelId="167" generatedId="381" role="interface-file"/>
+  <map modelId="167" generatedId="386" role="cycle-method"/>
+  <map modelId="178" generatedId="400" role="context-parameter"/>
+  <map modelId="178" generatedId="399" role="init-method"/>
+  <map modelId="178" generatedId="402" role="context-parameter"/>
+  <map modelId="178" generatedId="401" role="reset-method"/>
+  <map modelId="181" generatedId="406"/>
+  <map modelId="180" generatedId="405"/>
+  <map modelId="179" generatedId="404"/>
+  <map modelId="178" generatedId="407" role="context-parameter"/>
+  <map modelId="189" generatedId="416"/>
+  <map modelId="188" generatedId="415"/>
+  <map modelId="187" generatedId="414"/>
+  <map modelId="186" generatedId="413"/>
+  <map modelId="185" generatedId="412"/>
+  <map modelId="184" generatedId="411"/>
+  <map modelId="183" generatedId="410"/>
+  <map modelId="182" generatedId="409"/>
+  <map modelId="178" generatedId="408" role="context-type"/>
+  <map modelId="178" generatedId="398" role="interface-file"/>
+  <map modelId="178" generatedId="403" role="cycle-method"/>
+  <map modelId="156" generatedId="419" role="context-parameter"/>
+  <map modelId="156" generatedId="418" role="init-method"/>
+  <map modelId="156" generatedId="421" role="context-parameter"/>
+  <map modelId="156" generatedId="420" role="reset-method"/>
+  <map modelId="158" generatedId="424"/>
+  <map modelId="157" generatedId="423"/>
+  <map modelId="156" generatedId="425" role="context-parameter"/>
+  <map modelId="166" generatedId="434"/>
+  <map modelId="165" generatedId="433"/>
+  <map modelId="164" generatedId="432"/>
+  <map modelId="163" generatedId="431"/>
+  <map modelId="162" generatedId="430"/>
+  <map modelId="161" generatedId="429"/>
+  <map modelId="160" generatedId="428"/>
+  <map modelId="159" generatedId="427"/>
+  <map modelId="156" generatedId="426" role="context-type"/>
+  <map modelId="156" generatedId="417" role="interface-file"/>
+  <map modelId="156" generatedId="422" role="cycle-method"/>
+  <map modelId="18" generatedId="513"/>
+  <map modelId="17" generatedId="512"/>
+  <map modelId="20" generatedId="511"/>
+  <map modelId="19" generatedId="510"/>
+  <map modelId="22" generatedId="516"/>
+  <map modelId="21" generatedId="515"/>
+  <map modelId="40" generatedId="466" role="autom-transitions-type"/>
+  <map modelId="40" generatedId="461" role="autom-states-type"/>
+  <map modelId="44" generatedId="457" role="autom-transitions-type"/>
+  <map modelId="44" generatedId="454" role="autom-states-type"/>
+  <map modelId="2" generatedId="452"/>
+  <map modelId="3" generatedId="453"/>
+  <map modelId="1" generatedId="451"/>
+  <map modelId="5" generatedId="507"/>
+  <map modelId="4" generatedId="506"/>
+  <map modelId="15" generatedId="504"/>
+  <map modelId="14" generatedId="505"/>
+  <map modelId="16" generatedId="503"/>
+  <map modelId="13" generatedId="502"/>
+  <map modelId="12" generatedId="501"/>
+  <map modelId="11" generatedId="500"/>
+  <map modelId="10" generatedId="499"/>
+  <map modelId="9" generatedId="498"/>
+  <map modelId="8" generatedId="497"/>
+  <map modelId="7" generatedId="496"/>
+  <map modelId="6" generatedId="495"/>
+</mapping>
+<!--$********** SCADE Suite KCG 32-bit 6.6 (build i19) ***********
+** mapping.xml
+** Generation date: 2020-08-23T17:19:10
+*************************************************************$-->

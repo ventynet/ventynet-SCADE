@@ -1,0 +1,92 @@
+
+[STUDIO\TOOLS\CONFIGURATIONS\Code Generator]
+
+"C:\\Users\\sleepo\\Desktop\\ventest\\modelo\\modelo.etp"="KCG" 
+"C:\\Users\\sleepo\\Desktop\\verificacion 2\\ventest\\modelo\\modelo.etp"="Simulation" 
+"C:\\Users\\Deutscho\\Desktop\\verificacion 2\\ventest\\modelo\\modelo.etp"="KCG" 
+"C:\\Users\\Sebastian\\Desktop\\Ventynet\\verificacion 2\\ventest\\modelo\\modelo.etp"="Simulation" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Metrics and Rules Checker]
+
+"C:\\Users\\sleepo\\Desktop\\ventest\\modelo\\modelo.etp"="MetricRule" 
+"C:\\Users\\sleepo\\Desktop\\verificacion 2\\ventest\\modelo\\modelo.etp"="MetricRule" 
+"C:\\Users\\Deutscho\\Desktop\\verificacion 2\\ventest\\modelo\\modelo.etp"="MetricRule" 
+"C:\\Users\\Sebastian\\Desktop\\Ventynet\\verificacion 2\\ventest\\modelo\\modelo.etp"="MetricRule" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Reporter]
+
+"C:\\Users\\sleepo\\Desktop\\ventest\\modelo\\modelo.etp"="HTML" 
+"C:\\Users\\sleepo\\Desktop\\verificacion 2\\ventest\\modelo\\modelo.etp"="HTML" 
+"C:\\Users\\Deutscho\\Desktop\\verificacion 2\\ventest\\modelo\\modelo.etp"="HTML" 
+"C:\\Users\\Sebastian\\Desktop\\Ventynet\\verificacion 2\\ventest\\modelo\\modelo.etp"="HTML" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Timing and Stack Analysis Tools]
+
+"C:\\Users\\sleepo\\Desktop\\ventest\\modelo\\modelo.etp"="KCG" 
+"C:\\Users\\sleepo\\Desktop\\verificacion 2\\ventest\\modelo\\modelo.etp"="KCG" 
+"C:\\Users\\Deutscho\\Desktop\\verificacion 2\\ventest\\modelo\\modelo.etp"="KCG" 
+
+[STUDIO\Workspace]
+
+"ActiveProject"="C:\\Users\\Sebastian\\Desktop\\Ventynet\\verificacion 2\\ventest\\modelo\\modelo.etp" 
+
+[SCADE\Editor\Shortcut]
+
+"groupNb"="0" 
+
+[SCADE\Editor\Tool]
+
+"UsePolyline"="false" 
+"TransitionKind"="weak" 
+"McVersion"="MC66" 
+
+[SCADE\Diff\Tool]
+
+"LastProject1"="" 
+"LastProject2"="" 
+
+[SCADE\Generator\Tool]
+
+"PragmaTarget"="C" 
+
+[SCADE\Simulator\Simulation]
+
+"Latency"="200" 
+"RefreshRate"="1" 
+
+[SCADE\Simulator\BinaryDisplay]
+
+"Count"="0" 
+
+[SCADE\Simulator\OctalDisplay]
+
+"Count"="0" 
+
+[SCADE\Simulator\HexadecimalDisplay]
+
+"Count"="0" 
+
+[SCADE\Simulator\Watch]
+
+"Watch1"="general/reloj/" 
+"Watch2"="general/ti/" 
+"Watch3"="general/te/" 
+"Watch4"="duty_inyectores_inspira/fio2/" 
+"Count"="3" 
+
+[SCADE\Simulator\Graph]
+
+"Graph1"="duty_inyectores_inspira/q/" 
+"Count"="0" 
+
+[SCADE\Simulator\ControlBreakpoint]
+
+"Count"="0" 
+
+[SCADE\Simulator\DataBreakpoint]
+
+"Count"="0" 
+
+[SCADE\Simulator\TclBreakpoint]
+
+"Count"="0" 

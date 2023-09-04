@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/6" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Sensor name="qSensor">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="float32"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Sensor oid="!ed/4e95/1B7E/2190/5f429e18200d"/>
+			</pragmas>
+		</Sensor>
+		<Sensor name="FIO2Sensor">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int32"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Sensor oid="!ed/4e9a/1B7E/2190/5f429e2d11d8"/>
+			</pragmas>
+		</Sensor>
+		<Constant name="tabla">
+			<type>
+				<Table>
+					<type>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float32"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="2"/>
+							</size>
+						</Table>
+					</type>
+					<size>
+						<ConstValue value="8"/>
+					</size>
+				</Table>
+			</type>
+			<value>
+				<!-- [[30.0, 120.0], [40.0, 220.0], [50.0, 280.0], [60.0, 350.0], [70.0, 380.0], [80.0... -->
+				<DataArrayOp>
+					<data>
+						<!-- [30.0, 120.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="30.0"/>
+								<ConstValue value="120.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [40.0, 220.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="40.0"/>
+								<ConstValue value="220.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [50.0, 280.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="50.0"/>
+								<ConstValue value="280.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [60.0, 350.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="60.0"/>
+								<ConstValue value="350.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [70.0, 380.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="70.0"/>
+								<ConstValue value="380.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [80.0, 410.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="80.0"/>
+								<ConstValue value="410.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [90.0, 450.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="90.0"/>
+								<ConstValue value="450.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [100.0, 500.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="100.0"/>
+								<ConstValue value="500.0"/>
+							</data>
+						</DataArrayOp>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/4f45/1B7E/2190/5f42a5e52f2a"/>
+			</pragmas>
+		</Constant>
+		<Constant name="tablaInversa">
+			<type>
+				<Table>
+					<type>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float32"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="2"/>
+							</size>
+						</Table>
+					</type>
+					<size>
+						<ConstValue value="8"/>
+					</size>
+				</Table>
+			</type>
+			<value>
+				<!-- [[120.0, 30.0], [220.0, 40.0], [280.0, 50.0], [350.0, 60.0], [380.0, 70.0], [410.... -->
+				<DataArrayOp>
+					<data>
+						<!-- [120.0, 30.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="120.0"/>
+								<ConstValue value="30.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [220.0, 40.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="220.0"/>
+								<ConstValue value="40.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [280.0, 50.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="280.0"/>
+								<ConstValue value="50.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [350.0, 60.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="350.0"/>
+								<ConstValue value="60.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [380.0, 70.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="380.0"/>
+								<ConstValue value="70.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [410.0, 80.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="410.0"/>
+								<ConstValue value="80.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [450.0, 90.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="450.0"/>
+								<ConstValue value="90.0"/>
+							</data>
+						</DataArrayOp>
+						<!-- [500.0, 100.0] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="500.0"/>
+								<ConstValue value="100.0"/>
+							</data>
+						</DataArrayOp>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/e667/1B7E/2190/5f42abce2af4"/>
+			</pragmas>
+		</Constant>
+		<Constant name="tiempoPausaInspiracion">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int32"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="10"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/182ee/1B7E/2190/5f42bda93a14"/>
+			</pragmas>
+		</Constant>
+		<Constant name="tiempoPausaExpiracion">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int32"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="10"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/182f7/1B7E/2190/5f42bdba5b36"/>
+			</pragmas>
+		</Constant>
+		<Constant name="ajusteFIO2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int32"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="5"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/4f4a/2FAA/2DA0/5f87bf583807"/>
+			</pragmas>
+		</Constant>
+		<Constant name="ajusteQ">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int32"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="5"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/4fe7/2FAA/2DA0/5f87c74c5f93"/>
+			</pragmas>
+		</Constant>
+	</declarations>
+</File>

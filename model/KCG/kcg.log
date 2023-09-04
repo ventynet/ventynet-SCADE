@@ -1,0 +1,15 @@
+$********** SCADE Suite KCG 32-bit 6.6 (build i19) ***********
+** Command: kcg66.exe -config C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/KCG/config.txt
+** Generation date: 2020-08-11T18:21:00
+*************************************************************$
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo\Operator11.xscade, line 80, character 17
+  at path properties::aumentarODisminuir/_L1/
+ The local variable _L1 is never used
+1 warning was found
+No error was found
+No failure occurred
+$********** SCADE Suite KCG 32-bit 6.6 (build i19) ***********
+** kcg.log
+** Generation date: 2020-08-11T18:21:02
+*************************************************************$

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <Model commandLine="" date="">
+    <Option name="use_types" value="#off#"/>
+    <Option name="imported_root_package" value="#off#"/>
+    <Option name="root_package" value="#off#"/>
+    <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <Option name="state_vector" value="#off#"/>
+    <Option name="static" value="#off#"/>
+    <Option name="separate_io_all" value="#off#"/>
+    <Option name="no_separate_io" value="#off#"/>
+    <Option name="separate_io" value="#off#"/>
+    <Option name="warn_error" value="#off#"/>
+    <Option name="short_circuit" value="#off#"/>
+    <Option name="wrap_c_ops" value="#off#"/>
+    <Option name="input_file" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/scade_model_without_unused.scade"/>
+    <Option name="probes" value="#on#"/>
+    <Option name="no_observe" value="#off#"/>
+    <Option name="observe" value="#off#"/>
+    <Option name="debug" value="#on#"/>
+    <Option name="user_config" value="./user_macros.h"/>
+    <Option name="input_threshold" value="#off#"/>
+    <Option name="header" value="#off#"/>
+    <Option name="significance_length" value="31"/>
+    <Option name="name_length" value="200"/>
+    <Option name="globals_prefix" value="#off#"/>
+    <Option name="keep_asserts" value="#off#"/>
+    <Option name="global_root_context" value="#off#"/>
+    <Option name="expall" value="#off#"/>
+    <Option name="noexp" value="#off#"/>
+    <Option name="exp" value="#off#"/>
+    <Option name="target_dir" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation"/>
+    <Option name="target" value="C"/>
+    <Option name="root" value="general"/>
+    <Option name="auth" value="#off#"/>
+    <Constant scadeName="tabla" scadeType="float32^(2)^(8)" targetName="tabla" targetType="array_float32_2_8"/>
+    <Constant scadeName="tablaInversa" scadeType="float32^(2)^(8)" targetName="tablaInversa" targetType="array_float32_2_8"/>
+    <Constant macroDef="true" scadeName="tiempoPausaInspiracion" scadeType="int32" targetName="tiempoPausaInspiracion" targetType="kcg_int32"/>
+    <Constant macroDef="true" scadeName="tiempoPausaExpiracion" scadeType="int32" targetName="tiempoPausaExpiracion" targetType="kcg_int32"/>
+    <Sensor scadeName="nPulmon" scadeType="int32" targetName="nPulmon" targetType="kcg_int32"/>
+    <Sensor scadeName="qPulmon" scadeType="float32" targetName="qPulmon" targetType="kcg_float32"/>
+    <RootNode headerFile="general.h" scadeName="general" targetCycleFct="general" targetInitFct="general_reset" targetInitializationFct="general_init">
+      <Input inCtx="true" scadeName="q" scadeType="float32" targetName="q" targetType="kcg_float32"/>
+      <Input inCtx="true" scadeName="fio2" scadeType="float32" targetName="fio2" targetType="kcg_float32"/>
+      <Input inCtx="true" scadeName="ti" scadeType="int32" targetName="ti" targetType="kcg_int32"/>
+      <Input inCtx="true" scadeName="te" scadeType="int32" targetName="te" targetType="kcg_int32"/>
+      <Output inCtx="true" scadeName="abrirO2" scadeType="bool" targetName="abrirO2" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="dutyO2" scadeType="float32" targetName="dutyO2" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="abrirAire" scadeType="bool" targetName="abrirAire" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="dutyAire" scadeType="float32" targetName="dutyAire" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="abrirExpiracion" scadeType="bool" targetName="abrirExpiracion" targetType="kcg_bool"/>
+      <Signal inCtx="true" scadeName="reiniciarReloj" targetName="reiniciarReloj"/>
+      <Local inCtx="true" scadeName="reloj" scadeType="int32" targetName="reloj" targetType="kcg_int32"/>
+      <Local inCtx="true" scadeName="_L2" scadeType="int32" targetName="_L2" targetType="kcg_int32"/>
+      <Local inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L17" scadeType="bool" targetName="_L17" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L18" scadeType="bool" targetName="_L18" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L20" scadeType="bool" targetName="_L20" targetType="kcg_bool"/>
+      <Automaton scadeName="ventilador" targetStatesType="SSM_ST_ventilador" targetTransitionsType="SSM_TR_ventilador">
+        <State scadeName="inspiracion" targetName="SSM_st_inspiracion_ventilador">
+          <Local clockVal="SSM_st_inspiracion_ventilador" clockVar="ventilador_state_act" inCtx="true" scadeName="qTotal" scadeType="float32" targetName="qTotal_inspiracion_ventilador" targetType="kcg_float32"/>
+          <Local clockVal="SSM_st_inspiracion_ventilador" clockVar="ventilador_state_act" inCtx="true" scadeName="_L29" scadeType="bool" targetName="_L29_inspiracion_ventilador" targetType="kcg_bool"/>
+          <Automaton scadeName="regularEIngresar" targetStatesType="SSM_ST_regularEIngresar_inspiracion_ventilador" targetTransitionsType="SSM_TR_regularEIngresar_inspiracion_ventilador">
+            <State scadeName="regular" targetName="SSM_st_regular_regularEIngresar_inspiracion_ventilador">
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L20" scadeType="bool" targetName="_L20_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_bool"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L21" scadeType="bool" targetName="_L21_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_bool"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L22" scadeType="float32" targetName="_L22_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L23" scadeType="float32" targetName="_L23_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L19" scadeType="float32" targetName="_L19_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L18" scadeType="float32" targetName="_L18_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L17" scadeType="float32" targetName="_L17_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L16" scadeType="int32" targetName="_L16_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_int32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L12" scadeType="float32" targetName="_L12_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L13" scadeType="float32" targetName="_L13_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L14" scadeType="int32" targetName="_L14_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_int32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L15" scadeType="int32" targetName="_L15_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_int32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L11" scadeType="int32" targetName="_L11_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_int32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L10" scadeType="int32" targetName="_L10_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_int32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L25" scadeType="float32" targetName="_L25_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L24" scadeType="float32" targetName="_L24_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L33" scadeType="float32" targetName="_L33_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Local clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L37" scadeType="float32" targetName="_L37_regular_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <NodeInstance clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" instName="4" refName="paramIniciales" scadeName="paramIniciales">
+                <OutCtxVar clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" targetName="Context_paramIniciales_4"/>
+              </NodeInstance>
+              <NodeInstance clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" instName="5" refName="controlInspiracion" scadeName="controlInspiracion">
+                <OutCtxVar clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" targetName="Context_controlInspiracion_5"/>
+              </NodeInstance>
+              <NodeInstance clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" instName="1" refName="regularMezcla" scadeName="regularMezcla">
+                <OutCtxVar clockVal="SSM_st_regular_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" targetName="Context_regularMezcla_1"/>
+              </NodeInstance>
+              <Last/>
+              <Fork priority="1">
+                <Condition/>
+                <Transition kind="weak" scadeDest="ingresar" targetName="SSM_TR_regular_ingresar_1_regular_regularEIngresar_inspiracion_ventilador"/>
+              </Fork>
+            </State>
+            <State scadeName="ingresar" targetName="SSM_st_ingresar_regularEIngresar_inspiracion_ventilador">
+              <Local clockVal="SSM_st_ingresar_regularEIngresar_inspiracion_ventilador" clockVar="regularEIngresar_clock_inspiracion_ventilador" inCtx="true" scadeName="_L2" scadeType="float32" targetName="_L2_ingresar_regularEIngresar_inspiracion_ventilador" targetType="kcg_float32"/>
+              <Fork priority="1">
+                <Condition/>
+                <Transition kind="weak" scadeDest="regular" targetName="SSM_TR_ingresar_regular_1_ingresar_regularEIngresar_inspiracion_ventilador"/>
+              </Fork>
+            </State>
+            <ActiveState inCtx="true" targetName="regularEIngresar_state_act_inspiracion_ventilador"/>
+            <SelectedState inCtx="true" targetName="regularEIngresar_state_sel_inspiracion_ventilador"/>
+            <NextState inCtx="true" mem="true" targetName="regularEIngresar_state_nxt_inspiracion_ventilador"/>
+            <ResetActiveState inCtx="true" mem="true" targetName="regularEIngresar_reset_act_inspiracion_ventilador"/>
+            <ResetNextState inCtx="true" mem="true" targetName="regularEIngresar_reset_nxt_inspiracion_ventilador"/>
+            <StrongTransition inCtx="true" targetName="regularEIngresar_fired_strong_inspiracion_ventilador"/>
+            <WeakTransition inCtx="true" targetName="regularEIngresar_fired_inspiracion_ventilador"/>
+          </Automaton>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="weak" scadeDest="pausaInspiracion" targetName="SSM_TR_inspiracion_pausaInspiracion_1_inspiracion_ventilador"/>
+          </Fork>
+        </State>
+        <State scadeName="espiracion" targetName="SSM_st_espiracion_ventilador">
+          <Local clockVal="SSM_st_espiracion_ventilador" clockVar="ventilador_state_act" inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2_espiracion_ventilador" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_espiracion_ventilador" clockVar="ventilador_state_act" inCtx="true" scadeName="_L3" scadeType="bool" targetName="_L3_espiracion_ventilador" targetType="kcg_bool"/>
+          <Local clockVal="SSM_st_espiracion_ventilador" clockVar="ventilador_state_act" inCtx="true" scadeName="_L4" scadeType="float32" targetName="_L4_espiracion_ventilador" targetType="kcg_float32"/>
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="weak" scadeDest="pausaEspiracion" targetName="SSM_TR_espiracion_pausaEspiracion_1_espiracion_ventilador"/>
+          </Fork>
+        </State>
+        <State scadeName="pausaInspiracion" targetName="SSM_st_pausaInspiracion_ventilador">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="weak" scadeDest="espiracion" targetName="SSM_TR_pausaInspiracion_espiracion_1_pausaInspiracion_ventilador"/>
+          </Fork>
+        </State>
+        <State scadeName="pausaEspiracion" targetName="SSM_st_pausaEspiracion_ventilador">
+          <Fork priority="1">
+            <Condition/>
+            <Transition kind="weak" scadeDest="inspiracion" targetName="SSM_TR_pausaEspiracion_inspiracion_1_pausaEspiracion_ventilador"/>
+          </Fork>
+        </State>
+        <ActiveState inCtx="true" targetName="ventilador_state_act"/>
+        <SelectedState inCtx="true" targetName="ventilador_state_sel"/>
+        <NextState inCtx="true" mem="true" targetName="ventilador_state_nxt"/>
+        <ResetActiveState inCtx="true" mem="true" targetName="ventilador_reset_act"/>
+        <ResetNextState inCtx="true" mem="true" targetName="ventilador_reset_nxt"/>
+        <StrongTransition inCtx="true" targetName="ventilador_fired_strong"/>
+        <WeakTransition inCtx="true" targetName="ventilador_fired"/>
+      </Automaton>
+      <NodeInstance instName="2" refName="contar_aux" scadeName="aux::contar">
+        <OutCtxVar targetName="Context_contar_2"/>
+      </NodeInstance>
+      <InitOp instName="6"/>
+      <PreOp instName="6"/>
+      <Memory inCtx="true" targetName="abrirO2" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="dutyO2" targetType="kcg_float32"/>
+      <Memory inCtx="true" targetName="abrirAire" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="dutyAire" targetType="kcg_float32"/>
+      <Memory inCtx="true" targetName="abrirExpiracion" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
+      <Init inCtx="true" targetName="init1" targetType="kcg_bool"/>
+      <Memory inCtx="true" targetName="qTotal_inspiracion_ventilador" targetType="kcg_float32"/>
+      <Memory inCtx="true" targetName="regularEIngresar_state_nxt_inspiracion_ventilador" targetType="SSM_ST_regularEIngresar_inspiracion_ventilador"/>
+      <Memory inCtx="true" targetName="ventilador_state_nxt" targetType="SSM_ST_ventilador"/>
+      <Memory inCtx="true" targetName="_L3" targetType="kcg_bool"/>
+      <Clock clockVal="SSM_st_inspiracion_ventilador" clockVar="ventilador_state_act" inCtx="true" targetName="regularEIngresar_clock_inspiracion_ventilador" targetType="SSM_ST_regularEIngresar_inspiracion_ventilador"/>
+      <Clock inCtx="true" targetName="ventilador_state_act" targetType="SSM_ST_ventilador"/>
+      <OutCtxType targetName="outC_general"/>
+      <InCtxType targetName="inC_general"/>
+    </RootNode>
+    <NoExpNode headerFile="paramIniciales.h" scadeName="paramIniciales" targetCycleFct="paramIniciales" targetInitFct="paramIniciales_reset" targetInitializationFct="paramIniciales_init">
+      <Input scadeName="q" scadeType="float32" targetName="q" targetType="kcg_float32"/>
+      <Input scadeName="FIO2" scadeType="float32" targetName="FIO2" targetType="kcg_float32"/>
+      <Input scadeName="tiempos_i" scadeType="int32" targetName="tiempos_i" targetType="kcg_int32"/>
+      <Input scadeName="tiempos_e" scadeType="int32" targetName="tiempos_e" targetType="kcg_int32"/>
+      <Output inCtx="true" scadeName="dutyTotal" scadeType="float32" targetName="dutyTotal" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="fio2" scadeType="float32" targetName="fio2" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="ti" scadeType="int32" targetName="ti" targetType="kcg_int32"/>
+      <Output inCtx="true" scadeName="te" scadeType="int32" targetName="te" targetType="kcg_int32"/>
+      <Local inCtx="true" scadeName="_L1" scadeType="float32" targetName="_L1" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L2" scadeType="float32" targetName="_L2" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L4" scadeType="float32" targetName="_L4" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L5" scadeType="float32" targetName="_L5" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L6" scadeType="float32" targetName="_L6" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L8" scadeType="float32" targetName="_L8" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L10" scadeType="int32" targetName="_L10" targetType="kcg_int32"/>
+      <Local inCtx="true" scadeName="_L11" scadeType="int32" targetName="_L11" targetType="kcg_int32"/>
+      <Local inCtx="true" scadeName="_L13" scadeType="float32^(2)^(8)" targetName="_L13" targetType="array_float32_2_8"/>
+      <Local inCtx="true" scadeName="_L16" scadeType="float32^(2)^(8)" targetName="_L16" targetType="array_float32_2_8"/>
+      <NodeInstance instName="1" refName="flujo_aux" scadeName="aux::flujo">
+        <OutCtxVar targetName="Context_flujo_1"/>
+      </NodeInstance>
+      <NodeInstance instName="1" refName="empatar_aux" scadeName="aux::empatar">
+        <OutCtxVar targetName="Context_empatar_1"/>
+      </NodeInstance>
+      <NodeInstance instName="2" refName="empatar_aux" scadeName="aux::empatar">
+        <OutCtxVar targetName="Context_empatar_2"/>
+      </NodeInstance>
+      <OutCtxType targetName="outC_paramIniciales"/>
+    </NoExpNode>
+    <NoExpNode headerFile="controlInspiracion.h" scadeName="controlInspiracion" targetCycleFct="controlInspiracion" targetInitFct="controlInspiracion_reset" targetInitializationFct="controlInspiracion_init">
+      <Input scadeName="qPulmon" scadeType="float32" targetName="_1_qPulmon" targetType="kcg_float32"/>
+      <Input scadeName="nPulmon" scadeType="int32" targetName="_2_nPulmon" targetType="kcg_int32"/>
+      <Input scadeName="dutyParam" scadeType="float32" targetName="dutyParam" targetType="kcg_float32"/>
+      <Input scadeName="fio2Param" scadeType="float32" targetName="fio2Param" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="abrirO2" scadeType="bool" targetName="abrirO2" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="dutyO2" scadeType="float32" targetName="dutyO2" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="abrirAire" scadeType="bool" targetName="abrirAire" targetType="kcg_bool"/>
+      <Output inCtx="true" scadeName="dutyAire" scadeType="float32" targetName="dutyAire" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L1" scadeType="float32" targetName="_L1" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L2" scadeType="int32" targetName="_L2" targetType="kcg_int32"/>
+      <Local inCtx="true" scadeName="_L3" scadeType="float32" targetName="_L3" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L4" scadeType="float32" targetName="_L4" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L5" scadeType="float32" targetName="_L5" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L6" scadeType="float32" targetName="_L6" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L7" scadeType="float32" targetName="_L7" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L10" scadeType="bool" targetName="_L10" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L9" scadeType="bool" targetName="_L9" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L8" scadeType="bool" targetName="_L8" targetType="kcg_bool"/>
+      <InitOp instName="PROVISIONAL2"/>
+      <InitOp instName="PROVISIONAL1"/>
+      <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
+      <OutCtxType targetName="outC_controlInspiracion"/>
+    </NoExpNode>
+    <NoExpNode headerFile="regularMezcla.h" scadeName="regularMezcla" targetCycleFct="regularMezcla" targetInitFct="regularMezcla_reset" targetInitializationFct="regularMezcla_init">
+      <Input scadeName="abrirO2" scadeType="bool" targetName="abrirO2" targetType="kcg_bool"/>
+      <Input scadeName="dutyO2" scadeType="float32" targetName="dutyO2" targetType="kcg_float32"/>
+      <Input scadeName="abrirAire" scadeType="bool" targetName="abrirAire" targetType="kcg_bool"/>
+      <Input scadeName="dutyAire" scadeType="float32" targetName="dutyAire" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="qO2adicional" scadeType="float32" targetName="qO2adicional" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="qAireAdicional" scadeType="float32" targetName="qAireAdicional" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L2" scadeType="bool" targetName="_L2" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L3" scadeType="float32" targetName="_L3" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L4" scadeType="bool" targetName="_L4" targetType="kcg_bool"/>
+      <Local inCtx="true" scadeName="_L5" scadeType="float32" targetName="_L5" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L6" scadeType="float32" targetName="_L6" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L7" scadeType="float32" targetName="_L7" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L8" scadeType="float32^(2)^(8)" targetName="_L8" targetType="array_float32_2_8"/>
+      <Local inCtx="true" scadeName="_L9" scadeType="float32" targetName="_L9" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L13" scadeType="float32" targetName="_L13" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L12" scadeType="float32" targetName="_L12" targetType="kcg_float32"/>
+      <Local inCtx="true" scadeName="_L11" scadeType="float32^(2)^(8)" targetName="_L11" targetType="array_float32_2_8"/>
+      <Local inCtx="true" scadeName="_L10" scadeType="float32" targetName="_L10" targetType="kcg_float32"/>
+      <NodeInstance instName="1" refName="empatar_aux" scadeName="aux::empatar">
+        <OutCtxVar targetName="Context_empatar_1"/>
+      </NodeInstance>
+      <NodeInstance instName="2" refName="empatar_aux" scadeName="aux::empatar">
+        <OutCtxVar targetName="Context_empatar_2"/>
+      </NodeInstance>
+      <OutCtxType targetName="outC_regularMezcla"/>
+    </NoExpNode>
+    <Package scadeName="aux">
+      <NoExpNode headerFile="flujo_aux.h" scadeName="flujo" targetCycleFct="flujo_aux" targetInitFct="flujo_reset_aux" targetInitializationFct="flujo_init_aux">
+        <Input scadeName="q" scadeType="float32" targetName="q" targetType="kcg_float32"/>
+        <Input scadeName="p" scadeType="float32" targetName="p" targetType="kcg_float32"/>
+        <Output inCtx="true" scadeName="flujo_q" scadeType="float32" targetName="flujo_q" targetType="kcg_float32"/>
+        <Output inCtx="true" scadeName="flujo_p" scadeType="float32" targetName="flujo_p" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L2" scadeType="float32" targetName="_L2" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L4" scadeType="float32" targetName="_L4" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L3" scadeType="float32" targetName="_L3" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L8" scadeType="float32" targetName="_L8" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L10" scadeType="float32" targetName="_L10" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L11" scadeType="float32" targetName="_L11" targetType="kcg_float32"/>
+        <OutCtxType targetName="outC_flujo_aux"/>
+      </NoExpNode>
+      <NoExpNode headerFile="empatar_aux.h" scadeName="empatar" targetCycleFct="empatar_aux" targetInitFct="empatar_reset_aux" targetInitializationFct="empatar_init_aux">
+        <Input scadeName="llave" scadeType="float32" targetName="llave" targetType="kcg_float32"/>
+        <Input scadeName="tabla" scadeType="float32^(2)^(8)" targetName="tabla1" targetType="array_float32_2_8"/>
+        <Output inCtx="true" scadeName="resultado" scadeType="float32" targetName="resultado" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L1" scadeType="float32" targetName="_L1" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L2" scadeType="float32^(2)^(8)" targetName="_L2" targetType="array_float32_2_8"/>
+        <Local inCtx="true" scadeName="_L3" scadeType="float32" targetName="_L3" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L4" scadeType="float32" targetName="_L4" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L5" scadeType="float32^(8)" targetName="_L5" targetType="array_float32_8"/>
+        <Iterator instName="1" iteratorKind="mapfold" scadeSize="8" targetSize="8">
+          <NodeInstance instName="1" refName="comparar_aux" scadeName="aux::comparar">
+            <OutCtxVar targetName="Context_comparar_1"/>
+          </NodeInstance>
+        </Iterator>
+        <OutCtxType targetName="outC_empatar_aux"/>
+      </NoExpNode>
+      <NoExpNode headerFile="comparar_aux.h" scadeName="comparar" targetCycleFct="comparar_aux" targetInitFct="comparar_reset_aux" targetInitializationFct="comparar_init_aux">
+        <Input scadeName="acom" scadeType="float32" targetName="acom" targetType="kcg_float32"/>
+        <Input scadeName="pareja" scadeType="float32^(2)" targetName="pareja" targetType="array_float32_2"/>
+        <Input scadeName="llave" scadeType="float32" targetName="llave" targetType="kcg_float32"/>
+        <Output inCtx="true" scadeName="resultado" scadeType="float32" targetName="resultado" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L1" scadeType="float32" targetName="_L1" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L2" scadeType="float32^(2)" targetName="_L2" targetType="array_float32_2"/>
+        <Local inCtx="true" scadeName="_L3" scadeType="float32" targetName="_L3" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L5" scadeType="bool" targetName="_L5" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L6" scadeType="float32" targetName="_L6" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L7" scadeType="float32" targetName="_L7" targetType="kcg_float32"/>
+        <Local inCtx="true" scadeName="_L4" scadeType="float32" targetName="_L4" targetType="kcg_float32"/>
+        <OutCtxType targetName="outC_comparar_aux"/>
+      </NoExpNode>
+      <NoExpNode headerFile="contar_aux.h" scadeName="contar" targetCycleFct="contar_aux" targetInitFct="contar_reset_aux" targetInitializationFct="contar_init_aux">
+        <Input scadeName="reiniciar" scadeType="bool" targetName="reiniciar" targetType="kcg_bool"/>
+        <Output inCtx="true" scadeName="conteo" scadeType="int32" targetName="conteo" targetType="kcg_int32"/>
+        <Local inCtx="true" scadeName="_L3" scadeType="int32" targetName="_L3" targetType="kcg_int32"/>
+        <Local inCtx="true" scadeName="_L4" scadeType="int32" targetName="_L4" targetType="kcg_int32"/>
+        <Local inCtx="true" scadeName="_L6" scadeType="int32" targetName="_L6" targetType="kcg_int32"/>
+        <Local inCtx="true" scadeName="_L11" scadeType="int32" targetName="_L11" targetType="kcg_int32"/>
+        <Local inCtx="true" scadeName="_L10" scadeType="bool" targetName="_L10" targetType="kcg_bool"/>
+        <Local inCtx="true" scadeName="_L7" scadeType="int32" targetName="_L7" targetType="kcg_int32"/>
+        <Local inCtx="true" scadeName="_L5" scadeType="int32" targetName="_L5" targetType="kcg_int32"/>
+        <Local inCtx="true" scadeName="_L1" scadeType="int32" targetName="_L1" targetType="kcg_int32"/>
+        <PreOp instName="1"/>
+        <InitOp instName="1"/>
+        <Init inCtx="true" targetName="init" targetType="kcg_bool"/>
+        <Memory inCtx="true" targetName="_L7" targetType="kcg_int32"/>
+        <OutCtxType targetName="outC_contar_aux"/>
+      </NoExpNode>
+    </Package>
+    <ArrayType cellType="kcg_float32" size="8" targetCompFct="kcg_comp_array_float32_8" targetCopyFct="kcg_copy_array_float32_8" targetName="array_float32_8"/>
+    <ArrayType cellType="array_float32_2" size="8" targetCompFct="kcg_comp_array_float32_2_8" targetCopyFct="kcg_copy_array_float32_2_8" targetName="array_float32_2_8"/>
+    <ArrayType cellType="kcg_float32" size="2" targetCompFct="kcg_comp_array_float32_2" targetCopyFct="kcg_copy_array_float32_2" targetName="array_float32_2"/>
+    <PredefType scadeName="int8" targetName="kcg_int8"/>
+    <PredefType scadeName="int16" targetName="kcg_int16"/>
+    <PredefType scadeName="int32" targetName="kcg_int32"/>
+    <PredefType scadeName="int64" targetName="kcg_int64"/>
+    <PredefType scadeName="uint8" targetName="kcg_uint8"/>
+    <PredefType scadeName="uint16" targetName="kcg_uint16"/>
+    <PredefType scadeName="uint32" targetName="kcg_uint32"/>
+    <PredefType scadeName="uint64" targetName="kcg_uint64"/>
+    <PredefType scadeName="size" targetName="kcg_size"/>
+    <PredefType scadeName="float32" targetName="kcg_float32"/>
+    <PredefType scadeName="float64" targetName="kcg_float64"/>
+    <PredefType scadeName="bool" targetName="kcg_bool"/>
+    <PredefType scadeName="char" targetName="kcg_char"/>
+  </Model>

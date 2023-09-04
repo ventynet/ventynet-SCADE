@@ -1,0 +1,52 @@
+$**************  SCADETOC Version 2019 R3 (build 20190802) **************
+** Generation date: 2020-08-11T18:20:59
+** Command: scade -code "C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\modelo.etp" -root duty_inyectores_inspira -conf KCG
+*************************************************************$
+*** Generated Files Information (GENFIL): KCG- Generated files
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\mapping.xml, line 0, character 0
+ ~mapping.xml
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\kcg_metrics.txt, line 0, character 0
+ ~kcg_metrics.txt
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\duty_inyectores_inspira.c, line 0, character 0
+ ~duty_inyectores_inspira.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\empatar_aux.c, line 0, character 0
+ ~empatar_aux.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\comparar_aux.c, line 0, character 0
+ ~comparar_aux.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\flujo_aux.c, line 0, character 0
+ ~flujo_aux.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\duty_inyectores_inspira.h, line 0, character 0
+ ~duty_inyectores_inspira.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\empatar_aux.h, line 0, character 0
+ ~empatar_aux.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\comparar_aux.h, line 0, character 0
+ ~comparar_aux.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\flujo_aux.h, line 0, character 0
+ ~flujo_aux.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\kcg_types.h, line 0, character 0
+ ~kcg_types.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\kcg_consts.h, line 0, character 0
+ ~kcg_consts.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\kcg_sensors.h, line 0, character 0
+ ~kcg_sensors.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\kcg_types.c, line 0, character 0
+ ~kcg_types.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\kcg_consts.c, line 0, character 0
+ ~kcg_consts.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\kcg_xml_filter_out.scade, line 0, character 0
+ ~kcg_xml_filter_out.scade
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\config.txt, line 0, character 0
+ ~config.txt
+*** Generated Files Information (GENFIL): Code Generator Generated files
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\user_macros.h, line 0, character 0
+ ~user_macros.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\kcg_imported_types.h, line 0, character 0
+ ~kcg_imported_types.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\sc2c.log, line 0, character 0
+ ~sc2c.log
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\KCG\sc2c_integration_files.txt, line 0, character 0
+ ~sc2c_integration_files.txt
+$**************  SCADETOC Version 2019 R3 (build 20190802) **************
+** Generation date: 2020-08-11T18:21:03
+** sc2c.log
+*************************************************************$

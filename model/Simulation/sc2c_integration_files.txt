@@ -1,0 +1,57 @@
+*****************************
+*** Generated KCG H/Ads files ***
+*****************************
+general.h
+contar_aux.h
+regularMezcla.h
+controlInspiracion.h
+paramIniciales.h
+empatar_aux.h
+comparar_aux.h
+flujo_aux.h
+kcg_types.h
+kcg_consts.h
+kcg_sensors.h
+
+*****************************
+*** Generated KCG C/Adb files ***
+*****************************
+general.c
+contar_aux.c
+regularMezcla.c
+controlInspiracion.c
+paramIniciales.c
+empatar_aux.c
+comparar_aux.c
+flujo_aux.c
+kcg_types.c
+kcg_consts.c
+
+*****************************
+*** Code Integration C Files ***
+*****************************
+modelo_type.c
+$(SCADE)\lib\C\SmuPredefConv.c
+$(SCADE)\lib\C\SmuConfig.c
+$(SCADE)\lib\C\SmuTypes.c
+$(SCADE)\lib\C\SmuLib.c
+$(SCADE)\lib\C\SmuVTable.c
+modelo_mapping.c
+
+*****************************
+*** Generated SC2C Files ***
+*****************************
+user_macros.h
+kcg_imported_types.h
+
+*****************************
+*** Include Directories ***
+*****************************
+$(SCADE)\libraries\SC65\libmathext
+.
+$(SCADE)
+$(SCADE)\include
+$(SCADE)\include\C
+$(SCADE)\include\Ada
+$(SCADE)\lib\Ada
+

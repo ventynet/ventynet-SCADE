@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$********** SCADE Suite KCG 32-bit 6.6 (build i19) ***********
+** Command: kcg66.exe -config C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/KCG/config.txt
+** Generation date: 2020-08-11T18:21:02
+*************************************************************$-->
+<mapping>
+  <config>
+    <option name="use_types" value="#off#"/>
+    <option name="imported_root_package" value="#off#"/>
+    <option name="root_package" value="#off#"/>
+    <option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <option name="state_vector" value="#off#"/>
+    <option name="static" value="#off#"/>
+    <option name="separate_io_all" value="#off#"/>
+    <option name="no_separate_io" value="#off#"/>
+    <option name="separate_io" value="#off#"/>
+    <option name="warn_error" value="#off#"/>
+    <option name="short_circuit" value="#off#"/>
+    <option name="wrap_c_ops" value="#off#"/>
+    <option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libverif/libverif.xscade"/>
+    <option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libpwlinear/lut.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libpwlinear/pwlinear.xscade"/>
+    <option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libmathext/mathext.xscade"/>
+    <option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libmath/math.xscade"/>
+    <option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libmath/vect.xscade"/>
+    <option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/liblinear/filters.xscade"/>
+    <option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/liblinear/linear.xscade"/>
+    <option name="input_file"
+        value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libdigital/TruthTables.xscade"/>
+    <option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libdigital/digital.xscade"/>
+    <option name="input_file" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Package2.xscade"/>
+    <option name="input_file" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Operator2.xscade"/>
+    <option name="input_file" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Package1.xscade"/>
+    <option name="input_file" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Operator1.xscade"/>
+    <option name="probes" value="#off#"/>
+    <option name="debug" value="#off#"/>
+    <option name="no_observe" value="#off#"/>
+    <option name="observe" value="#off#"/>
+    <option name="user_config" value="./user_macros.h"/>
+    <option name="input_threshold" value="#off#"/>
+    <option name="header" value="#off#"/>
+    <option name="significance_length" value="31"/>
+    <option name="name_length" value="200"/>
+    <option name="globals_prefix" value="#off#"/>
+    <option name="keep_asserts" value="#off#"/>
+    <option name="global_root_context" value="#off#"/>
+    <option name="expall" value="#off#"/>
+    <option name="noexp" value="#off#"/>
+    <option name="exp" value="#off#"/>
+    <option name="target_dir" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/KCG"/>
+    <option name="target" value="C"/>
+    <option name="root" value="duty_inyectores_inspira"/>
+    <option name="auth" value="#off#"/>
+  </config>
+  <model>
+    <array id="1" baseType="14" size="8"/>
+    <array id="2" baseType="3" size="8"/>
+    <array id="3" baseType="14" size="2"/>
+    <predefType id="4" name="bool"/>
+    <predefType id="5" name="char"/>
+    <predefType id="6" name="int8"/>
+    <predefType id="7" name="int16"/>
+    <predefType id="8" name="int32"/>
+    <predefType id="9" name="int64"/>
+    <predefType id="10" name="uint8"/>
+    <predefType id="11" name="uint16"/>
+    <predefType id="12" name="uint32"/>
+    <predefType id="13" name="uint64"/>
+    <predefType id="14" name="float32"/>
+    <predefType id="15" name="float64"/>
+    <predefType id="16" name="size"/>
+    <package id="17" name="properties"/>
+    <operator id="18" name="duty_inyectores_inspira" imported="false" root="true" expanded="false">
+      <input id="19" name="q" clock="false" type="14"/>
+      <input id="20" name="FIO2" clock="false" type="14"/>
+      <input id="21" name="tiempos_i" clock="false" type="7"/>
+      <input id="22" name="tiempos_e" clock="false" type="7"/>
+      <output id="23" name="a" clock="false" type="14"/>
+      <output id="24" name="fio2" clock="false" type="14"/>
+      <output id="25" name="ti" clock="false" type="7"/>
+      <output id="26" name="te" clock="false" type="7"/>
+      <instance id="27" name="1" op="31" expanded="false"/>
+      <instance id="28" name="1" op="36" expanded="false"/>
+      <instance id="29" name="2" op="36" expanded="false"/>
+    </operator>
+    <package id="30" name="aux">
+      <operator id="31" name="flujo" imported="false" root="false" expanded="false">
+        <input id="32" name="q" clock="false" type="14"/>
+        <input id="33" name="p" clock="false" type="14"/>
+        <output id="34" name="flujo_q" clock="false" type="14"/>
+        <output id="35" name="flujo_p" clock="false" type="14"/>
+      </operator>
+      <operator id="36" name="empatar" imported="false" root="false" expanded="false">
+        <input id="37" name="llave" clock="false" type="14"/>
+        <input id="38" name="tabla" clock="false" type="2"/>
+        <output id="39" name="resultado" clock="false" type="14"/>
+        <iterator id="40" name="1" kind="mapfold" size="8">
+          <instance id="41" name="1" op="42" expanded="false"/>
+        </iterator>
+      </operator>
+      <operator id="42" name="comparar" imported="false" root="false" expanded="false">
+        <input id="43" name="acom" clock="false" type="14"/>
+        <input id="44" name="pareja" clock="false" type="3"/>
+        <input id="45" name="llave" clock="false" type="14"/>
+        <output id="46" name="resultado" clock="false" type="14"/>
+      </operator>
+    </package>
+    <package id="47" name="digital"/>
+    <package id="48" name="truthtables">
+      <enum id="49" name="TruthTableValues">
+        <value id="50" name="T" default="false"/>
+        <value id="51" name="F" default="false"/>
+        <value id="52" name="X" default="false"/>
+      </enum>
+    </package>
+    <package id="53" name="linear"/>
+    <package id="54" name="filters"/>
+    <package id="55" name="vect"/>
+    <package id="56" name="math"/>
+    <package id="57" name="mathext">
+      <package id="58" name="mathextimpl"/>
+    </package>
+    <package id="59" name="pwlinear"/>
+    <package id="60" name="lut"/>
+    <package id="61" name="verif"/>
+  </model>
+  <generated>
+    <c>
+      <file id="62" name="duty_inyectores_inspira.h">
+        <function id="63" name="duty_inyectores_inspira_init">
+          <parameter id="64" name="outC" type="70" pointer="true"/>
+        </function>
+        <function id="65" name="duty_inyectores_inspira_reset">
+          <parameter id="66" name="outC" type="70" pointer="true"/>
+        </function>
+        <function id="67" name="duty_inyectores_inspira">
+          <parameter id="68" name="inC" type="75" pointer="true"/>
+          <parameter id="69" name="outC" type="70" pointer="true"/>
+        </function>
+        <struct id="70" name="outC_duty_inyectores_inspira">
+          <field id="71" name="a" type="145" pointer="false"/>
+          <field id="72" name="fio2" type="145" pointer="false"/>
+          <field id="73" name="ti" type="136" pointer="false"/>
+          <field id="74" name="te" type="136" pointer="false"/>
+        </struct>
+        <struct id="75" name="inC_duty_inyectores_inspira">
+          <field id="76" name="q" type="145" pointer="false"/>
+          <field id="77" name="FIO2" type="145" pointer="false"/>
+          <field id="78" name="tiempos_i" type="136" pointer="false"/>
+          <field id="79" name="tiempos_e" type="136" pointer="false"/>
+        </struct>
+      </file>
+      <file id="80" name="empatar_aux.h">
+        <function id="81" name="empatar_aux" returnType="145">
+          <parameter id="82" name="llave" type="145" pointer="false"/>
+          <parameter id="83" name="tabla" type="106" pointer="true"/>
+        </function>
+      </file>
+      <file id="84" name="comparar_aux.h">
+        <function id="85" name="comparar_aux" returnType="145">
+          <parameter id="86" name="acom" type="145" pointer="false"/>
+          <parameter id="87" name="pareja" type="107" pointer="true"/>
+          <parameter id="88" name="llave" type="145" pointer="false"/>
+        </function>
+      </file>
+      <file id="89" name="flujo_aux.h">
+        <function id="90" name="flujo_aux">
+          <parameter id="91" name="q" type="145" pointer="false"/>
+          <parameter id="92" name="p" type="145" pointer="false"/>
+          <parameter id="93" name="flujo_q" type="145" pointer="true"/>
+          <parameter id="94" name="flujo_p" type="145" pointer="true"/>
+        </function>
+      </file>
+      <file id="95" name="kcg_types.h">
+        <ifdef id="96" name="kcg_use_array_float32_2_8">
+          <function id="97" name="kcg_comp_array_float32_2_8" returnType="146">
+            <parameter id="102" name="kcg_c1" type="106" pointer="true"/>
+            <parameter id="103" name="kcg_c2" type="106" pointer="true"/>
+          </function>
+        </ifdef>
+        <ifdef id="100" name="kcg_use_array_float32_2">
+          <function id="101" name="kcg_comp_array_float32_2" returnType="146">
+            <parameter id="102" name="kcg_c1" type="107" pointer="true"/>
+            <parameter id="103" name="kcg_c2" type="107" pointer="true"/>
+          </function>
+        </ifdef>
+        <macro id="104" name="kcg_copy_array_float32_2_8"/>
+        <macro id="105" name="kcg_copy_array_float32_2"/>
+        <array id="106" name="array_float32_2_8" baseType="107" size="8"/>
+        <array id="107" name="array_float32_2" baseType="145" size="2"/>
+        <enum id="108" name="TruthTableValues_truthtables" tagName="kcg_tag_TruthTableValues_truthtables">
+          <value id="109" name="T_truthtables"/>
+          <value id="110" name="F_truthtables"/>
+          <value id="111" name="X_truthtables"/>
+        </enum>
+        <macro id="112" name="kcg_assign_array"/>
+        <macro id="113" name="kcg_assign_struct"/>
+        <macro id="114" name="kcg_lnot_uint8"/>
+        <macro id="115" name="kcg_lnot_uint16"/>
+        <macro id="116" name="kcg_lnot_uint32"/>
+        <macro id="117" name="kcg_lnot_uint64"/>
+        <macro id="118" name="kcg_lsl_uint8"/>
+        <macro id="119" name="kcg_lsl_uint16"/>
+        <macro id="120" name="kcg_lsl_uint32"/>
+        <macro id="121" name="kcg_lsl_uint64"/>
+        <macro id="122" name="kcg_true"/>
+        <macro id="123" name="kcg_false"/>
+        <macro id="124" name="kcg_lit_int8"/>
+        <macro id="125" name="kcg_lit_int16"/>
+        <macro id="126" name="kcg_lit_int32"/>
+        <macro id="127" name="kcg_lit_int64"/>
+        <macro id="128" name="kcg_lit_uint8"/>
+        <macro id="129" name="kcg_lit_uint16"/>
+        <macro id="130" name="kcg_lit_uint32"/>
+        <macro id="131" name="kcg_lit_uint64"/>
+        <macro id="132" name="kcg_lit_size"/>
+        <macro id="133" name="kcg_lit_float64"/>
+        <macro id="134" name="kcg_lit_float32"/>
+        <predefType id="135" name="kcg_int8"/>
+        <predefType id="136" name="kcg_int16"/>
+        <predefType id="137" name="kcg_int32"/>
+        <predefType id="138" name="kcg_int64"/>
+        <predefType id="139" name="kcg_uint8"/>
+        <predefType id="140" name="kcg_uint16"/>
+        <predefType id="141" name="kcg_uint32"/>
+        <predefType id="142" name="kcg_uint64"/>
+        <predefType id="143" name="kcg_size"/>
+        <predefType id="144" name="kcg_float64"/>
+        <predefType id="145" name="kcg_float32"/>
+        <predefType id="146" name="kcg_bool"/>
+        <predefType id="147" name="kcg_char"/>
+        <macro id="148" name="KCG_MAPW_CPY"/>
+      </file>
+      <file id="149" name="kcg_consts.h"/>
+      <file id="150" name="kcg_sensors.h"/>
+    </c>
+    <map srcId="144" dstId="133" role="wrapped-lit"/>
+    <map srcId="145" dstId="134" role="wrapped-lit"/>
+    <map srcId="143" dstId="132" role="wrapped-lit"/>
+    <map srcId="142" dstId="131" role="wrapped-lit"/>
+    <map srcId="142" dstId="117" role="wrapped-lnot"/>
+    <map srcId="142" dstId="121" role="wrapped-lsl"/>
+    <map srcId="141" dstId="130" role="wrapped-lit"/>
+    <map srcId="141" dstId="116" role="wrapped-lnot"/>
+    <map srcId="141" dstId="120" role="wrapped-lsl"/>
+    <map srcId="140" dstId="129" role="wrapped-lit"/>
+    <map srcId="140" dstId="115" role="wrapped-lnot"/>
+    <map srcId="140" dstId="119" role="wrapped-lsl"/>
+    <map srcId="139" dstId="128" role="wrapped-lit"/>
+    <map srcId="139" dstId="114" role="wrapped-lnot"/>
+    <map srcId="139" dstId="118" role="wrapped-lsl"/>
+    <map srcId="138" dstId="127" role="wrapped-lit"/>
+    <map srcId="137" dstId="126" role="wrapped-lit"/>
+    <map srcId="136" dstId="125" role="wrapped-lit"/>
+    <map srcId="135" dstId="124" role="wrapped-lit"/>
+    <map srcId="106" dstId="96" role="type-use"/>
+    <map srcId="106" dstId="97" role="type-comparison"/>
+    <map srcId="106" dstId="104" role="type-copy"/>
+    <map srcId="107" dstId="100" role="type-use"/>
+    <map srcId="107" dstId="101" role="type-comparison"/>
+    <map srcId="107" dstId="105" role="type-copy"/>
+  </generated>
+  <map modelId="52" generatedId="111"/>
+  <map modelId="51" generatedId="110"/>
+  <map modelId="50" generatedId="109"/>
+  <map modelId="18" generatedId="64" role="context-parameter"/>
+  <map modelId="18" generatedId="63" role="init-method"/>
+  <map modelId="18" generatedId="66" role="context-parameter"/>
+  <map modelId="18" generatedId="65" role="reset-method"/>
+  <map modelId="18" generatedId="68" role="input-struct-parameter"/>
+  <map modelId="22" generatedId="79"/>
+  <map modelId="21" generatedId="78"/>
+  <map modelId="20" generatedId="77"/>
+  <map modelId="19" generatedId="76"/>
+  <map modelId="18" generatedId="75" role="input-struct-type"/>
+  <map modelId="18" generatedId="69" role="context-parameter"/>
+  <map modelId="26" generatedId="74"/>
+  <map modelId="25" generatedId="73"/>
+  <map modelId="24" generatedId="72"/>
+  <map modelId="23" generatedId="71"/>
+  <map modelId="18" generatedId="70" role="context-type"/>
+  <map modelId="18" generatedId="62" role="interface-file"/>
+  <map modelId="18" generatedId="67" role="cycle-method"/>
+  <map modelId="38" generatedId="83"/>
+  <map modelId="37" generatedId="82"/>
+  <map modelId="36" generatedId="80" role="interface-file"/>
+  <map modelId="36" generatedId="81" role="cycle-method"/>
+  <map modelId="45" generatedId="88"/>
+  <map modelId="44" generatedId="87"/>
+  <map modelId="43" generatedId="86"/>
+  <map modelId="42" generatedId="84" role="interface-file"/>
+  <map modelId="42" generatedId="85" role="cycle-method"/>
+  <map modelId="35" generatedId="94"/>
+  <map modelId="34" generatedId="93"/>
+  <map modelId="33" generatedId="92"/>
+  <map modelId="32" generatedId="91"/>
+  <map modelId="31" generatedId="89" role="interface-file"/>
+  <map modelId="31" generatedId="90" role="cycle-method"/>
+  <map modelId="49" generatedId="108"/>
+  <map modelId="2" generatedId="106"/>
+  <map modelId="3" generatedId="107"/>
+  <map modelId="5" generatedId="147"/>
+  <map modelId="4" generatedId="146"/>
+  <map modelId="15" generatedId="144"/>
+  <map modelId="14" generatedId="145"/>
+  <map modelId="16" generatedId="143"/>
+  <map modelId="13" generatedId="142"/>
+  <map modelId="12" generatedId="141"/>
+  <map modelId="11" generatedId="140"/>
+  <map modelId="10" generatedId="139"/>
+  <map modelId="9" generatedId="138"/>
+  <map modelId="8" generatedId="137"/>
+  <map modelId="7" generatedId="136"/>
+  <map modelId="6" generatedId="135"/>
+</mapping>
+<!--$********** SCADE Suite KCG 32-bit 6.6 (build i19) ***********
+** mapping.xml
+** Generation date: 2020-08-11T18:21:02
+*************************************************************$-->

@@ -1,0 +1,87 @@
+#############################################################
+######    Begin of Makefile
+#############################################################
+
+SCADE=C:\Program Files\ANSYS Inc\v195\SCADE\SCADE\.
+
+SHELL=cmd.exe
+
+C_FLAGS = -pedantic
+
+all: general.exe general.dll 
+
+win64/general.o: general.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "general.c" -o "win64\general.o"
+
+win64/contar_aux.o: contar_aux.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "contar_aux.c" -o "win64\contar_aux.o"
+
+win64/regularMezcla.o: regularMezcla.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "regularMezcla.c" -o "win64\regularMezcla.o"
+
+win64/controlInspiracion.o: controlInspiracion.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "controlInspiracion.c" -o "win64\controlInspiracion.o"
+
+win64/paramIniciales.o: paramIniciales.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "paramIniciales.c" -o "win64\paramIniciales.o"
+
+win64/empatar_aux.o: empatar_aux.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "empatar_aux.c" -o "win64\empatar_aux.o"
+
+win64/comparar_aux.o: comparar_aux.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "comparar_aux.c" -o "win64\comparar_aux.o"
+
+win64/flujo_aux.o: flujo_aux.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "flujo_aux.c" -o "win64\flujo_aux.o"
+
+win64/kcg_types.o: kcg_types.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "kcg_types.c" -o "win64\kcg_types.o"
+
+win64/kcg_consts.o: kcg_consts.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "kcg_consts.c" -o "win64\kcg_consts.o"
+
+win64/modelo_type.o: modelo_type.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "modelo_type.c" -o "win64\modelo_type.o"
+
+win64/SmuPredefConv.o: C:/Program\ Files/ANSYS\ Inc/v195/SCADE/SCADE/lib/C/SmuPredefConv.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuPredefConv.c" -o "win64\SmuPredefConv.o"
+
+win64/SmuConfig.o: C:/Program\ Files/ANSYS\ Inc/v195/SCADE/SCADE/lib/C/SmuConfig.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuConfig.c" -o "win64\SmuConfig.o"
+
+win64/SmuTypes.o: C:/Program\ Files/ANSYS\ Inc/v195/SCADE/SCADE/lib/C/SmuTypes.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuTypes.c" -o "win64\SmuTypes.o"
+
+win64/SmuLib.o: C:/Program\ Files/ANSYS\ Inc/v195/SCADE/SCADE/lib/C/SmuLib.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuLib.c" -o "win64\SmuLib.o"
+
+win64/SmuVTable.o: C:/Program\ Files/ANSYS\ Inc/v195/SCADE/SCADE/lib/C/SmuVTable.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "$(SCADE)\lib\C\SmuVTable.c" -o "win64\SmuVTable.o"
+
+win64/modelo_mapping.o: modelo_mapping.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "modelo_mapping.c" -o "win64\modelo_mapping.o"
+
+win64/modelo_interface.o: modelo_interface.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "modelo_interface.c" -o "win64\modelo_interface.o"
+
+win64/SmuProxy.o: C:/Program\ Files/ANSYS\ Inc/v195/SCADE/SCADE/lib/C/SmuProxy.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "C:\Program Files\ANSYS Inc\v195\SCADE\SCADE\lib\C\SmuProxy.c" -o "win64\SmuProxy.o"
+
+general.dll: win64/general.o win64/contar_aux.o win64/regularMezcla.o win64/controlInspiracion.o win64/paramIniciales.o win64/empatar_aux.o win64/comparar_aux.o win64/flujo_aux.o win64/kcg_types.o win64/kcg_consts.o win64/modelo_type.o win64/SmuPredefConv.o win64/SmuConfig.o win64/SmuTypes.o win64/SmuLib.o win64/SmuVTable.o win64/modelo_mapping.o win64/modelo_interface.o win64/SmuProxy.o SmuExport.def 
+	gcc -mwindows -mwin32 -shared -static-libgcc  "win64\general.o" "win64\contar_aux.o" "win64\regularMezcla.o" "win64\controlInspiracion.o" "win64\paramIniciales.o" "win64\empatar_aux.o" "win64\comparar_aux.o" "win64\flujo_aux.o" "win64\kcg_types.o" "win64\kcg_consts.o" "win64\modelo_type.o" "win64\SmuPredefConv.o" "win64\SmuConfig.o" "win64\SmuTypes.o" "win64\SmuLib.o" "win64\SmuVTable.o" "win64\modelo_mapping.o" "win64\modelo_interface.o" "win64\SmuProxy.o" -Wl,--output-def,"SmuExport.def" -lm -lwsock32 -m64 -o "general.dll" 
+
+SmuExport.def: C:/Program\ Files/ANSYS\ Inc/v195/SCADE/SCADE/lib/C/SmuExport.def
+	copy "C:\Program Files\ANSYS Inc\v195\SCADE\SCADE\lib\C\SmuExport.def" "SmuExport.def"
+
+win64/modelo_dll.o: modelo_dll.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "modelo_dll.c" -o "win64\modelo_dll.o"
+
+win64/SmuMainWindows.o: C:/Program\ Files/ANSYS\ Inc/v195/SCADE/SCADE/lib/C/SmuMainWindows.c
+	gcc -I"$(SCADE)\libraries\SC65\libmathext" -I"." -I"$(SCADE)" -I"$(SCADE)\include" -I"$(SCADE)\include\C" -I"$(SCADE)\include\Ada" -I"$(SCADE)\lib\Ada" $(C_FLAGS) -DBUILD_DLL -DSIM -DWIN32 -D_CONSOLE -D_MBCS -c -ansi -std=c99 -m64 "C:\Program Files\ANSYS Inc\v195\SCADE\SCADE\lib\C\SmuMainWindows.c" -o "win64\SmuMainWindows.o"
+
+general.exe: win64/modelo_dll.o win64/SmuMainWindows.o 
+	gcc "win64\modelo_dll.o" "win64\SmuMainWindows.o" -lm -lwsock32 -m64 -o "general.exe" 
+
+#############################################################
+######    End of Makefile
+#############################################################

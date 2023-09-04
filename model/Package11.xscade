@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/6" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" name="deprecated">
+	<declarations>
+		<Operator name="ctrlInsp" href="controlInspiracion.xscade"/>
+		<Operator name="example" href="Operator22.xscade"/>
+		<Operator name="example1" href="example1.xscade"/>
+	</declarations>
+	<pragmas>
+		<ed:Package oid="!ed/4d78/1B7E/2190/5f4298d8224a" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/6">
+			<diagrams>
+				<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/4d79/1B7E/2190/5f4298d810aa" blockKind="constants"/>
+				<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/4d7a/1B7E/2190/5f4298d8166" blockKind="types"/>
+				<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/4d7b/1B7E/2190/5f4298d83a0b" blockKind="sensors"/>
+			</diagrams>
+		</ed:Package>
+	</pragmas>
+</Package>

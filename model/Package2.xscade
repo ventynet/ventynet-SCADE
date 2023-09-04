@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/6" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="aux">
+			<declarations>
+				<Package name="deprecated" href="Package11.xscade"/>
+				<Operator name="flujo" href="flujo.xscade"/>
+				<Operator name="empatar" href="Operator21.xscade"/>
+				<Operator name="comparar" href="Operator31.xscade"/>
+				<Operator name="contar" href="contador.xscade"/>
+				<Operator name="ajuste" href="Operator53.xscade"/>
+				<Operator name="pwm" href="Operator6.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/4b12/4EE9/1D00/5f33157b1590" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/6">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/4b13/4EE9/1D00/5f33157b7924" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/4b14/4EE9/1D00/5f33157b5850" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/4b15/4EE9/1D00/5f33157b7e81" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

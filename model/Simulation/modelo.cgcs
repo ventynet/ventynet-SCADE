@@ -1,0 +1,57 @@
+[scade_version: 2019 R3]
+[scade_project: C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/modelo.etp]
+[Code Generator]
+4fc0bc0d01d57c7b344fddc283ed62a0 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/scade_model_without_unused.scade
+ed69b0c13e32a2abc655269671f48108 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/cmd_cg.log
+a111554d474474bb4f1d90fbd422c78a C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/comparar_aux.c
+9aea43282e3c731629b0cab11a8e5930 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/comparar_aux.h
+19e8ec195b32e172704db4de6d2a0c55 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/config.txt
+98dd5f9e3dacaaf7e51549c4ccf3baaa C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/contar_aux.c
+ce1c74c165d1cdfa1f6ebbacaccbcd1d C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/contar_aux.h
+14f793a137bf54ad653007c9a37fe8ec C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/controlInspiracion.c
+e772a073335bc5450b27b4f288afc0d3 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/controlInspiracion.h
+dc17c460bc3a6ddd729b79196323adad C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/empatar_aux.c
+d99c601a7b1d2c8c557cb05ec435f2ed C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/empatar_aux.h
+b7afc0397f2cb38461e60cf92b25b594 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/flujo_aux.c
+2effcdb9973391ba64a377cf28195e4e C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/flujo_aux.h
+e29b66acd982d18b79f9a563766cfb19 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/general.c
+36cd291f48919ebab42bdb88add13ada C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/general.h
+2a1a22c2079bf3a504b718ee14073e73 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/kcg_consts.c
+be11815823e26fa96e19dec826f5bc69 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/kcg_consts.h
+b392784117cc352003baac7ff3fe7fbb C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/kcg_files.txt
+c570e85441febaa6f6d5e23e14e58b55 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/kcg_imported_types.h
+bfa92fc9a4c231905177a3b01f9649a5 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/kcg_metrics.txt
+2bff5b1923473b69e74bbd2b3a3b1055 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/kcg_sensors.h
+eca6fb9035aee154ed388b1ec9a7cbd0 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/kcg_types.c
+aa85b89210a6cd2972f313c0f1825101 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/kcg_types.h
+065233d42665f2ed38dd858660978f2f C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/mapping.xml
+1de70923a65372bf2b632e78d5d5d1ce C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/paramIniciales.c
+25f19c701f30add58e62e79a59704dd1 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/paramIniciales.h
+0c2c20f235f022def63da7d18ed933fc C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/regularMezcla.c
+72beda8a7e8432536a4db257c9522195 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/regularMezcla.h
+ae3eb7ab76cdc5ab7228e39b505e73d6 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/user_macros.h
+[Mapping Utils]
+065233d42665f2ed38dd858660978f2f C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/mapping.xml
+c73facea18d05cfaead87ac32716a1eb C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/lib/C/SmuConfig.c
+63ca1258f2bc557f4914a90547c1afad C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/lib/C/SmuLib.c
+7770fc261a6c916323af4a1e84af7a90 C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/lib/C/SmuTypes.c
+fdc236851fcc107ead222892aa7071b4 C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/lib/C/SmuVTable.c
+7b37f0304883669b6d615af822f22066 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/modelo.etp
+142cd2e3c4ab939efc325ac127188955 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/modelo_mapping.c
+9383e64726e7223bbd0ebe8fd42aaae7 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/modelo_mapping.h
+[Simulator Wrapper]
+065233d42665f2ed38dd858660978f2f C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/mapping.xml
+7b37f0304883669b6d615af822f22066 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/modelo.etp
+f4b4b68d76ef47abbc5c9a7601aba9b8 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/modelo_dll.c
+d7d1721bfba55c755c0e74459335e721 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/modelo_interface.c
+f4cb7fd101a465343cec227d6986ef67 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/modelo_interface.h
+[Type Utils]
+065233d42665f2ed38dd858660978f2f C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/mapping.xml
+c73facea18d05cfaead87ac32716a1eb C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/lib/C/SmuConfig.c
+63ca1258f2bc557f4914a90547c1afad C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/lib/C/SmuLib.c
+ba954bceb09c977a857f6e4a0833dff7 C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/lib/C/SmuPredefConv.c
+7770fc261a6c916323af4a1e84af7a90 C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/lib/C/SmuTypes.c
+fdc236851fcc107ead222892aa7071b4 C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/lib/C/SmuVTable.c
+7b37f0304883669b6d615af822f22066 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/modelo.etp
+98916462d9e1597ec0e98364279916fc C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/modelo_type.c
+bc8f1e28d6d32431e342c4d8d59c4099 C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/modelo_type.h

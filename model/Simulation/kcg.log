@@ -1,0 +1,35 @@
+$********** SCADE Suite KCG 32-bit 6.6 (build i19) ***********
+** Command: kcg66.exe -config C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/config.txt
+** Generation date: 2020-08-23T17:19:08
+*************************************************************$
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/scade_model_without_unused.scade, line 1688, character 0
+  at path controlInspiracion/_L1/
+ The local variable _L1 is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/scade_model_without_unused.scade, line 1692, character 0
+  at path controlInspiracion/_L2/
+ The local variable _L2 is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/scade_model_without_unused.scade, line 1696, character 0
+  at path controlInspiracion/_L3/
+ The local variable _L3 is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/scade_model_without_unused.scade, line 1700, character 0
+  at path controlInspiracion/_L4/
+ The local variable _L4 is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/scade_model_without_unused.scade, line 872, character 0
+  at path general/ventilador:inspiracion:regularEIngresar:regular:_L14/
+ The local variable _L14 is never used
+*** Post-namespace Warning (WAR_508): Unused flow
+  at file C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Simulation/scade_model_without_unused.scade, line 876, character 0
+  at path general/ventilador:inspiracion:regularEIngresar:regular:_L15/
+ The local variable _L15 is never used
+6 warnings were found
+No error was found
+No failure occurred
+$********** SCADE Suite KCG 32-bit 6.6 (build i19) ***********
+** kcg.log
+** Generation date: 2020-08-23T17:19:10
+*************************************************************$

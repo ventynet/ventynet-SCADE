@@ -1,0 +1,90 @@
+$**************  SCADETOC Version 2019 R3 (build 20190802) **************
+** Generation date: 2020-08-23T17:19:07
+** Command: scade -code "C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\modelo.etp" -root general -conf Simulation -sim -all
+*************************************************************$
+*** Generated Files Information (GENFIL): KCG- Generated files
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\mapping.xml, line 0, character 0
+ ~mapping.xml
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\kcg_metrics.txt, line 0, character 0
+ ~kcg_metrics.txt
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\general.c, line 0, character 0
+ ~general.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\contar_aux.c, line 0, character 0
+ ~contar_aux.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\regularMezcla.c, line 0, character 0
+ ~regularMezcla.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\controlInspiracion.c, line 0, character 0
+ ~controlInspiracion.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\paramIniciales.c, line 0, character 0
+ ~paramIniciales.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\empatar_aux.c, line 0, character 0
+ ~empatar_aux.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\comparar_aux.c, line 0, character 0
+ ~comparar_aux.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\flujo_aux.c, line 0, character 0
+ ~flujo_aux.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\general.h, line 0, character 0
+ ~general.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\contar_aux.h, line 0, character 0
+ ~contar_aux.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\regularMezcla.h, line 0, character 0
+ ~regularMezcla.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\controlInspiracion.h, line 0, character 0
+ ~controlInspiracion.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\paramIniciales.h, line 0, character 0
+ ~paramIniciales.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\empatar_aux.h, line 0, character 0
+ ~empatar_aux.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\comparar_aux.h, line 0, character 0
+ ~comparar_aux.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\flujo_aux.h, line 0, character 0
+ ~flujo_aux.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\kcg_types.h, line 0, character 0
+ ~kcg_types.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\kcg_consts.h, line 0, character 0
+ ~kcg_consts.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\kcg_sensors.h, line 0, character 0
+ ~kcg_sensors.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\kcg_types.c, line 0, character 0
+ ~kcg_types.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\kcg_consts.c, line 0, character 0
+ ~kcg_consts.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\config.txt, line 0, character 0
+ ~config.txt
+*** Generated Files Information (GENFIL): Code Generator Generated files
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\user_macros.h, line 0, character 0
+ ~user_macros.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\kcg_imported_types.h, line 0, character 0
+ ~kcg_imported_types.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\sc2c.log, line 0, character 0
+ ~sc2c.log
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\sc2c_integration_files.txt, line 0, character 0
+ ~sc2c_integration_files.txt
+*** Generated Files Information (GENFIL): Type Utils Generated files
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\modelo_type.h, line 0, character 0
+ ~modelo_type.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\modelo_type.c, line 0, character 0
+ ~modelo_type.c
+*** Generated Files Information (GENFIL): Mapping Utils Generated files
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\modelo_mapping.h, line 0, character 0
+ ~modelo_mapping.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\modelo_mapping.c, line 0, character 0
+ ~modelo_mapping.c
+*** Generated Files Information (GENFIL): Simulator Generated files
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\modelo_interface.h, line 0, character 0
+ ~modelo_interface.h
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\modelo_interface.c, line 0, character 0
+ ~modelo_interface.c
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\modelo_dll.c, line 0, character 0
+ ~modelo_dll.c
+*** Generated Files Information (GENFIL): Build Generated files
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\Makefile_win64, line 0, character 0
+ ~Makefile_win64
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\general.dll, line 0, character 0
+ ~general.dll
+  at file C:\Users\sleepo\Desktop\verificacion 2\ventest\modelo\Simulation\general.exe, line 0, character 0
+ ~general.exe
+$**************  SCADETOC Version 2019 R3 (build 20190802) **************
+** Generation date: 2020-08-23T17:19:12
+** sc2c.log
+*************************************************************$

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <Model commandLine="" date="">
+    <Option name="use_types" value="#off#"/>
+    <Option name="imported_root_package" value="#off#"/>
+    <Option name="root_package" value="#off#"/>
+    <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+    <Option name="state_vector" value="#off#"/>
+    <Option name="static" value="#off#"/>
+    <Option name="separate_io_all" value="#off#"/>
+    <Option name="no_separate_io" value="#off#"/>
+    <Option name="separate_io" value="#off#"/>
+    <Option name="warn_error" value="#off#"/>
+    <Option name="short_circuit" value="#off#"/>
+    <Option name="wrap_c_ops" value="#off#"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libverif/libverif.xscade"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libpwlinear/lut.xscade"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libpwlinear/pwlinear.xscade"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libmathext/mathext.xscade"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libmath/math.xscade"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libmath/vect.xscade"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/liblinear/filters.xscade"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/liblinear/linear.xscade"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libdigital/TruthTables.xscade"/>
+    <Option name="input_file" value="C:/Program Files/ANSYS Inc/v195/SCADE/SCADE/libraries/SC65/libdigital/digital.xscade"/>
+    <Option name="input_file" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Package2.xscade"/>
+    <Option name="input_file" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Operator2.xscade"/>
+    <Option name="input_file" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Package1.xscade"/>
+    <Option name="input_file" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/Operator1.xscade"/>
+    <Option name="probes" value="#off#"/>
+    <Option name="debug" value="#off#"/>
+    <Option name="no_observe" value="#off#"/>
+    <Option name="observe" value="#off#"/>
+    <Option name="user_config" value="./user_macros.h"/>
+    <Option name="input_threshold" value="#off#"/>
+    <Option name="header" value="#off#"/>
+    <Option name="significance_length" value="31"/>
+    <Option name="name_length" value="200"/>
+    <Option name="globals_prefix" value="#off#"/>
+    <Option name="keep_asserts" value="#off#"/>
+    <Option name="global_root_context" value="#off#"/>
+    <Option name="expall" value="#off#"/>
+    <Option name="noexp" value="#off#"/>
+    <Option name="exp" value="#off#"/>
+    <Option name="target_dir" value="C:/Users/sleepo/Desktop/verificacion 2/ventest/modelo/KCG"/>
+    <Option name="target" value="C"/>
+    <Option name="root" value="duty_inyectores_inspira"/>
+    <Option name="auth" value="#off#"/>
+    <Package scadeName="properties"/>
+    <RootNode headerFile="duty_inyectores_inspira.h" scadeName="duty_inyectores_inspira" targetCycleFct="duty_inyectores_inspira" targetInitFct="duty_inyectores_inspira_reset" targetInitializationFct="duty_inyectores_inspira_init">
+      <Input inCtx="true" scadeName="q" scadeType="float32" targetName="q" targetType="kcg_float32"/>
+      <Input inCtx="true" scadeName="FIO2" scadeType="float32" targetName="FIO2" targetType="kcg_float32"/>
+      <Input inCtx="true" scadeName="tiempos_i" scadeType="int16" targetName="tiempos_i" targetType="kcg_int16"/>
+      <Input inCtx="true" scadeName="tiempos_e" scadeType="int16" targetName="tiempos_e" targetType="kcg_int16"/>
+      <Output inCtx="true" scadeName="a" scadeType="float32" targetName="a" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="fio2" scadeType="float32" targetName="fio2" targetType="kcg_float32"/>
+      <Output inCtx="true" scadeName="ti" scadeType="int16" targetName="ti" targetType="kcg_int16"/>
+      <Output inCtx="true" scadeName="te" scadeType="int16" targetName="te" targetType="kcg_int16"/>
+      <NodeInstance instName="1" refName="flujo_aux" scadeName="aux::flujo"/>
+      <NodeInstance instName="1" refName="empatar_aux" scadeName="aux::empatar"/>
+      <NodeInstance instName="2" refName="empatar_aux" scadeName="aux::empatar"/>
+      <OutCtxType targetName="outC_duty_inyectores_inspira"/>
+      <InCtxType targetName="inC_duty_inyectores_inspira"/>
+    </RootNode>
+    <Package scadeName="aux">
+      <NoExpNode headerFile="flujo_aux.h" scadeName="flujo" targetCycleFct="flujo_aux">
+        <Input scadeName="q" scadeType="float32" targetName="q" targetType="kcg_float32"/>
+        <Input scadeName="p" scadeType="float32" targetName="p" targetType="kcg_float32"/>
+        <Output scadeName="flujo_q" scadeType="float32" targetName="flujo_q" targetType="kcg_float32"/>
+        <Output scadeName="flujo_p" scadeType="float32" targetName="flujo_p" targetType="kcg_float32"/>
+      </NoExpNode>
+      <NoExpNode headerFile="empatar_aux.h" scadeName="empatar" targetCycleFct="empatar_aux">
+        <Input scadeName="llave" scadeType="float32" targetName="llave" targetType="kcg_float32"/>
+        <Input scadeName="tabla" scadeType="float32^(2)^(8)" targetName="tabla" targetType="array_float32_2_8"/>
+        <Output scadeName="resultado" scadeType="float32" targetName="resultado" targetType="kcg_float32"/>
+        <Iterator instName="1" iteratorKind="mapfold" scadeSize="8" targetSize="8">
+          <NodeInstance instName="1" refName="comparar_aux" scadeName="aux::comparar"/>
+        </Iterator>
+      </NoExpNode>
+      <NoExpNode headerFile="comparar_aux.h" scadeName="comparar" targetCycleFct="comparar_aux">
+        <Input scadeName="acom" scadeType="float32" targetName="acom" targetType="kcg_float32"/>
+        <Input scadeName="pareja" scadeType="float32^(2)" targetName="pareja" targetType="array_float32_2"/>
+        <Input scadeName="llave" scadeType="float32" targetName="llave" targetType="kcg_float32"/>
+        <Output scadeName="resultado" scadeType="float32" targetName="resultado" targetType="kcg_float32"/>
+      </NoExpNode>
+    </Package>
+    <Package scadeName="digital"/>
+    <Package scadeName="truthtables">
+      <EnumType scadeName="TruthTableValues" targetName="TruthTableValues_truthtables">
+        <EnumVal scadeName="T" targetName="T_truthtables"/>
+        <EnumVal scadeName="F" targetName="F_truthtables"/>
+        <EnumVal scadeName="X" targetName="X_truthtables"/>
+      </EnumType>
+    </Package>
+    <Package scadeName="linear"/>
+    <Package scadeName="filters"/>
+    <Package scadeName="vect"/>
+    <Package scadeName="math"/>
+    <Package scadeName="mathext">
+      <Package scadeName="mathextimpl"/>
+    </Package>
+    <Package scadeName="pwlinear"/>
+    <Package scadeName="lut"/>
+    <Package scadeName="verif"/>
+    <ArrayType cellType="array_float32_2" size="8" targetCompFct="kcg_comp_array_float32_2_8" targetCopyFct="kcg_copy_array_float32_2_8" targetName="array_float32_2_8"/>
+    <ArrayType cellType="kcg_float32" size="2" targetCompFct="kcg_comp_array_float32_2" targetCopyFct="kcg_copy_array_float32_2" targetName="array_float32_2"/>
+    <PredefType scadeName="int8" targetName="kcg_int8"/>
+    <PredefType scadeName="int16" targetName="kcg_int16"/>
+    <PredefType scadeName="int32" targetName="kcg_int32"/>
+    <PredefType scadeName="int64" targetName="kcg_int64"/>
+    <PredefType scadeName="uint8" targetName="kcg_uint8"/>
+    <PredefType scadeName="uint16" targetName="kcg_uint16"/>
+    <PredefType scadeName="uint32" targetName="kcg_uint32"/>
+    <PredefType scadeName="uint64" targetName="kcg_uint64"/>
+    <PredefType scadeName="size" targetName="kcg_size"/>
+    <PredefType scadeName="float32" targetName="kcg_float32"/>
+    <PredefType scadeName="float64" targetName="kcg_float64"/>
+    <PredefType scadeName="bool" targetName="kcg_bool"/>
+    <PredefType scadeName="char" targetName="kcg_char"/>
+  </Model>
